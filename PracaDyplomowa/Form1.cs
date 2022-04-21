@@ -54,19 +54,26 @@ namespace PracaDyplomowa
         private void PlusSize_Click(object sender, EventArgs e)
         {
             float currentSize = Terminal.Font.Size;
-            currentSize += 2.0F;
-
-            Terminal.Font = new Font(Terminal.Font.Name, currentSize, Terminal.Font.Style);
+            if(currentSize < 24.0)
+            {
+                currentSize += 2.0F;
+                Terminal.Font = new Font(Terminal.Font.Name, currentSize, Terminal.Font.Style);
+            }
         }
 
 
         //make font smaller in terminal
         private void MinusSize_Click(object sender, EventArgs e)
         {
+            
             float currentSize = Terminal.Font.Size;
-            currentSize -= 2.0F;
 
-            Terminal.Font = new Font(Terminal.Font.Name, currentSize, Terminal.Font.Style);
+            if(currentSize > 10)
+            {
+                currentSize -= 2.0F;
+
+                Terminal.Font = new Font(Terminal.Font.Name, currentSize, Terminal.Font.Style);
+            }
         }
 
         //start computer
@@ -171,4 +178,10 @@ namespace PracaDyplomowa
             return this.commandDescription;
         }
     }
+
+    public class Komputer
+    {
+
+    }
+
 }

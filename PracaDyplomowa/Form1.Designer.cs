@@ -62,26 +62,26 @@ namespace PracaDyplomowa
             this.PanelComputer.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelComputer.Location = new System.Drawing.Point(0, 0);
             this.PanelComputer.Name = "PanelComputer";
-            this.PanelComputer.Size = new System.Drawing.Size(289, 644);
+            this.PanelComputer.Size = new System.Drawing.Size(289, 647);
             this.PanelComputer.TabIndex = 0;
             // 
             // PowerLamp
             // 
             this.PowerLamp.BackColor = System.Drawing.Color.Maroon;
-            this.PowerLamp.Location = new System.Drawing.Point(134, 399);
+            this.PowerLamp.Location = new System.Drawing.Point(129, 170);
             this.PowerLamp.Name = "PowerLamp";
-            this.PowerLamp.Size = new System.Drawing.Size(18, 19);
+            this.PowerLamp.Size = new System.Drawing.Size(33, 27);
             this.PowerLamp.TabIndex = 7;
             // 
             // StartButton
             // 
             this.StartButton.BackColor = System.Drawing.Color.Black;
             this.StartButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.StartButton.ForeColor = System.Drawing.Color.White;
-            this.StartButton.Location = new System.Drawing.Point(104, 348);
+            this.StartButton.Location = new System.Drawing.Point(82, 272);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(86, 30);
+            this.StartButton.Size = new System.Drawing.Size(144, 43);
             this.StartButton.TabIndex = 4;
             this.StartButton.Text = "START";
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
@@ -91,9 +91,9 @@ namespace PracaDyplomowa
             this.EditButton.BackColor = System.Drawing.Color.Transparent;
             this.EditButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditButton.Image = ((System.Drawing.Image)(resources.GetObject("EditButton.Image")));
-            this.EditButton.Location = new System.Drawing.Point(119, 440);
+            this.EditButton.Location = new System.Drawing.Point(106, 399);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(49, 27);
+            this.EditButton.Size = new System.Drawing.Size(82, 39);
             this.EditButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.EditButton.TabIndex = 1;
             this.EditButton.TabStop = false;
@@ -106,7 +106,7 @@ namespace PracaDyplomowa
             this.Computer.Image = global::PracaDyplomowa.Properties.Resources.Desktop_Computer;
             this.Computer.Location = new System.Drawing.Point(0, 0);
             this.Computer.Name = "Computer";
-            this.Computer.Size = new System.Drawing.Size(289, 644);
+            this.Computer.Size = new System.Drawing.Size(289, 647);
             this.Computer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Computer.TabIndex = 0;
             this.Computer.TabStop = false;
@@ -125,7 +125,7 @@ namespace PracaDyplomowa
             this.PanelMonitor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelMonitor.Location = new System.Drawing.Point(289, 0);
             this.PanelMonitor.Name = "PanelMonitor";
-            this.PanelMonitor.Size = new System.Drawing.Size(655, 644);
+            this.PanelMonitor.Size = new System.Drawing.Size(651, 647);
             this.PanelMonitor.TabIndex = 1;
             // 
             // ProgressIntro
@@ -223,7 +223,7 @@ namespace PracaDyplomowa
             this.Monitor.Image = global::PracaDyplomowa.Properties.Resources.Monitor;
             this.Monitor.Location = new System.Drawing.Point(0, 0);
             this.Monitor.Name = "Monitor";
-            this.Monitor.Size = new System.Drawing.Size(655, 644);
+            this.Monitor.Size = new System.Drawing.Size(651, 647);
             this.Monitor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Monitor.TabIndex = 0;
             this.Monitor.TabStop = false;
@@ -232,10 +232,12 @@ namespace PracaDyplomowa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 644);
+            this.ClientSize = new System.Drawing.Size(940, 647);
             this.Controls.Add(this.PanelMonitor);
             this.Controls.Add(this.PanelComputer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplikacja-Symulator Komputera PC";
             this.PanelComputer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EditButton)).EndInit();

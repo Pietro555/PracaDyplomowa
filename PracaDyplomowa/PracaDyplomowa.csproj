@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Images\TestOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\computer_by_side.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
