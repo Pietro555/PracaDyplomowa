@@ -36,6 +36,7 @@ namespace PracaDyplomowa
             this.EditButton = new System.Windows.Forms.PictureBox();
             this.Computer = new System.Windows.Forms.PictureBox();
             this.PanelMonitor = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.ProgressIntro = new System.Windows.Forms.ProgressBar();
             this.PictureboxIntro = new System.Windows.Forms.PictureBox();
             this.MinusSize = new System.Windows.Forms.Button();
@@ -114,6 +115,7 @@ namespace PracaDyplomowa
             // PanelMonitor
             // 
             this.PanelMonitor.BackColor = System.Drawing.Color.Transparent;
+            this.PanelMonitor.Controls.Add(this.label1);
             this.PanelMonitor.Controls.Add(this.ProgressIntro);
             this.PanelMonitor.Controls.Add(this.PictureboxIntro);
             this.PanelMonitor.Controls.Add(this.MinusSize);
@@ -127,6 +129,16 @@ namespace PracaDyplomowa
             this.PanelMonitor.Name = "PanelMonitor";
             this.PanelMonitor.Size = new System.Drawing.Size(651, 647);
             this.PanelMonitor.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(287, 198);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 33);
+            this.label1.TabIndex = 7;
+            this.label1.Visible = false;
             // 
             // ProgressIntro
             // 
@@ -266,6 +278,7 @@ namespace PracaDyplomowa
         private System.Windows.Forms.PictureBox PictureboxIntro;
         private System.Windows.Forms.Panel PowerLamp;
         private System.Windows.Forms.ProgressBar ProgressIntro;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -19,12 +19,14 @@ namespace PracaDyplomowa
         List<Component> dyski = new List<Component>();
         List<Component> ramy = new List<Component>();
 
+        public Component procesor;
+
         public Form2()
         {
             InitializeComponent();
             this.Paint += new PaintEventHandler(GradientBackground);
 
-
+            
             Component intelCore = new Component("Intel core", "Specyfikacje intel cora", "Intel",
                 Image.FromFile(@"D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\Properties\Images\intelcore.png"));
             Component amdRyzen = new Component("AMD ryzen", "Specyfikacje AMD ryzena", "AMD", 
@@ -73,43 +75,105 @@ namespace PracaDyplomowa
                 comboBoxRAM.Items.Add(c.ToString());
             }
 
-
-
             this.Invalidate();
         }
 
+        //background gradient
         private void GradientBackground(Object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
             Rectangle gradientRect = new Rectangle(0, 0, Width, Height);
-            Brush b = new LinearGradientBrush(gradientRect, Color.FromArgb(30, 250, 50), Color.FromArgb(130, 250, 150), 1f);
+            Brush b = new LinearGradientBrush(gradientRect,  Color.FromArgb(130, 250, 150), Color.FromArgb(110, 110, 110), 1f);
 
 
             g.FillRectangle(b, gradientRect);
         }
 
-        private void buttonDodajProcek_Click(object sender, EventArgs e)
+        //accept button
+        private void buttonAkceptuj_Click(object sender, EventArgs e)
         {
-            int index = comboBoxProcesor.SelectedIndex;
-            pictureBoxProcesor.Image = procesory.ElementAt(index).zdjecie;
+            Form1 form1 = new Form1();
+
+            if(comboBoxProcesor.SelectedIndex != -1)
+               //form1.procesor = procesory.ElementAt(comboBoxProcesor.SelectedIndex);
+               procesor = procesory.ElementAt(comboBoxProcesor.SelectedIndex);
+
+            if (comboBoxGrafa.SelectedIndex != -1)
+                form1.kartaGraficzna = kartyGraficzne.ElementAt(comboBoxGrafa.SelectedIndex);
+
+            if (comboBoxRAM.SelectedIndex != -1)
+                form1.ram = ramy.ElementAt(comboBoxRAM.SelectedIndex);
+
+            if (comboBoxDysk.SelectedIndex != -1)
+                form1.dysk = dyski.ElementAt(comboBoxDysk.SelectedIndex);
+
+            this.Close();
+
         }
 
-        private void buttonDodajKarteGraf_Click(object sender, EventArgs e)
+        //back button
+        private void buttonWstecz_Click(object sender, EventArgs e)
         {
-            int index = comboBoxGrafa.SelectedIndex;
-            pictureBoxKartaGraf.Image = kartyGraficzne.ElementAt(index).zdjecie;
+            this.Close();
         }
 
-        private void buttonDodajRam_Click(object sender, EventArgs e)
+        //change image in combobox for Procesor
+        private void comboBoxProcesor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = comboBoxRAM.SelectedIndex;
-            pictureBoxRam.Image = ramy.ElementAt(index).zdjecie;
+            if (comboBoxProcesor.SelectedIndex != -1)
+            {
+                int index = comboBoxProcesor.SelectedIndex;
+                pictureBoxProcesor.Image = procesory.ElementAt(index).zdjecie;
+            }
+            else
+                pictureBoxProcesor.Image = null;
+
         }
 
-        private void buttonDodajDysk_Click(object sender, EventArgs e)
+        //change image in combobox for Karta Graficzna
+        private void comboBoxGrafa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = comboBoxDysk.SelectedIndex;
-            pictureBoxDysk.Image = dyski.ElementAt(index).zdjecie;
+            if (comboBoxGrafa.SelectedIndex != -1)
+            {
+                int index = comboBoxGrafa.SelectedIndex;
+                pictureBoxKartaGraf.Image = kartyGraficzne.ElementAt(index).zdjecie;
+            }
+            else
+                pictureBoxKartaGraf.Image = null;
+        }
+
+        //change image in combobox for Ram
+        private void comboBoxRAM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxRAM.SelectedIndex != -1)
+            {
+                int index = comboBoxRAM.SelectedIndex;
+                pictureBoxRam.Image = ramy.ElementAt(index).zdjecie;
+            }
+            else
+                pictureBoxRam.Image = null;
+
+        }
+
+        //change image in combobox for Dysk pamieci
+        private void comboBoxDysk_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxDysk.SelectedIndex != -1)
+            {
+                int index = comboBoxDysk.SelectedIndex;
+                pictureBoxDysk.Image = dyski.ElementAt(index).zdjecie;
+            }
+            else
+                pictureBoxDysk.Image = null;
+        }
+
+        //button clear
+        private void buttonWyczysc_Click(object sender, EventArgs e)
+        {
+            comboBoxProcesor.SelectedIndex = -1;
+            comboBoxGrafa.SelectedIndex = -1;
+            comboBoxRAM.SelectedIndex = -1;
+            comboBoxDysk.SelectedIndex = -1;
         }
     }
 }

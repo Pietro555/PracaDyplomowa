@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PracaDyplomowa
 {
-    class Component
+    public class Component
     {
         public string nazwa;
         public string specyfikacje;
@@ -29,6 +29,26 @@ namespace PracaDyplomowa
         public string ToString()
         {
             return this.nazwa;
+        }
+
+        public string GetNazwa()
+        {
+            return this.nazwa;
+        }
+
+        public string GetSpecyfikacje()
+        {
+            return this.specyfikacje;
+        }
+
+        public Image GetZdjecie()
+        {
+            return this.zdjecie;
+        }
+
+        public string GetProducent()
+        {
+            return this.producent;
         }
 
         public string GetInfo()
