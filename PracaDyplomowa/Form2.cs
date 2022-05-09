@@ -66,7 +66,7 @@ namespace PracaDyplomowa
             Component vengance = new Component("RAM Vengeance", "Specyfikacje vengena", "Corsair", Properties.Resources.vegence);
             ramy.Add(furyBeast);
             ramy.Add(vengance);
-
+            
             foreach(Component c in ramy)
             {
                 comboBoxRAM.Items.Add(c.ToString());
