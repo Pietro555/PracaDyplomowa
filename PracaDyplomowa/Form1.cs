@@ -15,20 +15,19 @@ namespace PracaDyplomowa
     public partial class Form1 : Form
     {
 
-        private ArrayList commandList = new ArrayList();
-        private Boolean IsStarted = false;
+        private static ArrayList commandList = new ArrayList();
+        private static Boolean IsStarted = false;
 
-        public Component procesor;
-        public Component kartaGraficzna;
-        public Component ram;
-        public Component dysk;
+        public Component procesor = new Component();
+        public Component kartaGraficzna = new Component();
+        public Component ram = new Component();
+        public Component dysk = new Component();
 
         public Form1()
         {
             InitializeComponent();
 
             this.Paint += new PaintEventHandler(GradientBackground);
-            Terminal.AppendText("> ");
 
             //---------------------------------------------------------------------------------------
             //Add commands here
@@ -73,7 +72,7 @@ namespace PracaDyplomowa
         {
             if(IsStarted == false)
             {
-                Form2 form2 = new Form2();
+                Form2 form2 = new Form2(this);
                 form2.ShowDialog();
             }
         }
@@ -115,7 +114,8 @@ namespace PracaDyplomowa
                 ProgressIntro.Visible = true;
                 PowerLamp.BackColor = Color.Gold;
                 ProgressIntro.BringToFront();
-            
+                Terminal.Text = "> ";
+
             int i = 0;
             while(i < 5)
             {
@@ -194,13 +194,27 @@ namespace PracaDyplomowa
                     bool UsedP = false, UsedG = false, UsedR = false, UsedD = false;
                     string text = "";
 
-                    if(CommandLine.Text.Equals("comp") && procesor != null && kartaGraficzna != null &&
-                                                               ram != null &&           dysk != null    )
+                    if(CommandLine.Text.Equals("comp"))
                     {
-                        text += procesor.GetInfo() + "\r\n";
-                        text += kartaGraficzna.GetInfo() + "\r\n";
-                        text += ram.GetInfo() + "\r\n";
-                        text += dysk.GetInfo() + "\r\n";
+                        if (procesor != null)
+                            text += procesor.GetInfo() + "\r\n";
+                        else
+                            text += "ERROR\r\n";
+
+                        if(kartaGraficzna != null)
+                            text += kartaGraficzna.GetInfo() + "\r\n";
+                        else
+                            text += "ERROR\r\n";
+
+                        if (ram != null)
+                            text += ram.GetInfo() + "\r\n";
+                        else
+                            text += "ERROR\r\n";
+
+                        if (dysk != null)
+                            text += dysk.GetInfo() + "\r\n";
+                        else
+                            text += "ERROR\r\n";
                     }
 
                     if(CommandLine.Text.Contains("-p") && UsedP == false && procesor != null)
@@ -229,12 +243,24 @@ namespace PracaDyplomowa
 
                     Terminal.AppendText(text);
                 }
+                else if (CommandLine.Text.Contains("cl"))
+                {
+                    Terminal.Text = "";
+                }
 
                 Terminal.AppendText("> ");
                 CommandLine.Clear();
             }
         }
 
+        //function to load compontents from Form2
+        public void LoadFromForm2(Component pprocek, Component ggrafa, Component rram,Component ddysk)
+        {
+            procesor = pprocek;
+            kartaGraficzna = ggrafa;
+            ram = rram;
+            dysk = ddysk;
+        }
     }
 
 }

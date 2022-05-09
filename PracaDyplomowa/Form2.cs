@@ -18,19 +18,22 @@ namespace PracaDyplomowa
         List<Component> kartyGraficzne = new List<Component>();
         List<Component> dyski = new List<Component>();
         List<Component> ramy = new List<Component>();
+        private Component p = null;
+        private Component g = null;
+        private Component r = null;
+        private Component d = null;
 
-        public Component procesor;
+        private Form1 fm1 = null;
 
-        public Form2()
+        public Form2(Form1 f)
         {
             InitializeComponent();
             this.Paint += new PaintEventHandler(GradientBackground);
 
-            
-            Component intelCore = new Component("Intel core", "Specyfikacje intel cora", "Intel",
-                Image.FromFile(@"D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\Properties\Images\intelcore.png"));
-            Component amdRyzen = new Component("AMD ryzen", "Specyfikacje AMD ryzena", "AMD", 
-                Image.FromFile(@"D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\Properties\Images\amdRyzen.png"));
+            fm1 = f;
+
+            Component intelCore = new Component("Intel core", "Specyfikacje intel cora", "Intel", Properties.Resources.intelcore);
+            Component amdRyzen = new Component("AMD ryzen", "Specyfikacje AMD ryzena", "AMD", Properties.Resources.amdRyzen);
             procesory.Add(intelCore);
             procesory.Add(amdRyzen);
 
@@ -39,10 +42,8 @@ namespace PracaDyplomowa
                 comboBoxProcesor.Items.Add(c.ToString());
             }
 
-            Component geforceRTX = new Component("RTX", "Specyfikacje RTXa", "Nvidia", 
-                Image.FromFile(@"D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\Properties\Images\rtx.png"));
-            Component AmdRadeon = new Component("AMD radeon", "Specyfikacje radeona", "AMD", 
-                Image.FromFile(@"D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\Properties\Images\radeon.png"));
+            Component geforceRTX = new Component("RTX", "Specyfikacje RTXa", "Nvidia", Properties.Resources.rtx);
+            Component AmdRadeon = new Component("AMD radeon", "Specyfikacje radeona", "AMD", Properties.Resources.radeon);
             kartyGraficzne.Add(geforceRTX);
             kartyGraficzne.Add(AmdRadeon);
 
@@ -51,10 +52,8 @@ namespace PracaDyplomowa
                 comboBoxGrafa.Items.Add(c.ToString());
             }
 
-            Component hdd = new Component("HDD", "Specyfikacje HDD", "Toshiba", 
-                Image.FromFile(@"D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\Properties\Images\hdd.png"));
-            Component ssd = new Component("SSD", "Specyfikacje SSD", "Western Digital", 
-                Image.FromFile(@"D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\Properties\Images\ssd.png"));
+            Component hdd = new Component("HDD", "Specyfikacje HDD", "Toshiba", Properties.Resources.hdd);
+            Component ssd = new Component("SSD", "Specyfikacje SSD", "Western Digital", Properties.Resources.ssd);
             dyski.Add(hdd);
             dyski.Add(ssd);
 
@@ -63,10 +62,8 @@ namespace PracaDyplomowa
                 comboBoxDysk.Items.Add(c.ToString());
             }
 
-            Component furyBeast = new Component("RAM Fury Beast", "Specyfikacje fury beast", "Kingston", 
-                Image.FromFile(@"D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\Properties\Images\ramfury.png"));
-            Component vengance = new Component("RAM Vengeance", "Specyfikacje vengena", "Corsair", 
-                Image.FromFile(@"D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\Properties\Images\vegence.png"));
+            Component furyBeast = new Component("RAM Fury Beast", "Specyfikacje fury beast", "Kingston", Properties.Resources.ramfury);
+            Component vengance = new Component("RAM Vengeance", "Specyfikacje vengena", "Corsair", Properties.Resources.vegence);
             ramy.Add(furyBeast);
             ramy.Add(vengance);
 
@@ -92,23 +89,20 @@ namespace PracaDyplomowa
         //accept button
         private void buttonAkceptuj_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-
-            if(comboBoxProcesor.SelectedIndex != -1)
-               //form1.procesor = procesory.ElementAt(comboBoxProcesor.SelectedIndex);
-               procesor = procesory.ElementAt(comboBoxProcesor.SelectedIndex);
+            if (comboBoxProcesor.SelectedIndex != -1)
+                p = procesory.ElementAt(comboBoxProcesor.SelectedIndex);
 
             if (comboBoxGrafa.SelectedIndex != -1)
-                form1.kartaGraficzna = kartyGraficzne.ElementAt(comboBoxGrafa.SelectedIndex);
+                g = kartyGraficzne.ElementAt(comboBoxGrafa.SelectedIndex);
 
             if (comboBoxRAM.SelectedIndex != -1)
-                form1.ram = ramy.ElementAt(comboBoxRAM.SelectedIndex);
+                r = ramy.ElementAt(comboBoxRAM.SelectedIndex);
 
             if (comboBoxDysk.SelectedIndex != -1)
-                form1.dysk = dyski.ElementAt(comboBoxDysk.SelectedIndex);
+                d = dyski.ElementAt(comboBoxDysk.SelectedIndex);
 
+            fm1.LoadFromForm2(p, g, r, d);            
             this.Close();
-
         }
 
         //back button

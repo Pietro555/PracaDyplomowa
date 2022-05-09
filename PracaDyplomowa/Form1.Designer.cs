@@ -80,7 +80,7 @@ namespace PracaDyplomowa
             this.StartButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.StartButton.ForeColor = System.Drawing.Color.White;
-            this.StartButton.Location = new System.Drawing.Point(82, 272);
+            this.StartButton.Location = new System.Drawing.Point(69, 282);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(144, 43);
             this.StartButton.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace PracaDyplomowa
             this.EditButton.BackColor = System.Drawing.Color.Transparent;
             this.EditButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditButton.Image = ((System.Drawing.Image)(resources.GetObject("EditButton.Image")));
-            this.EditButton.Location = new System.Drawing.Point(106, 399);
+            this.EditButton.Location = new System.Drawing.Point(102, 399);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(82, 39);
             this.EditButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

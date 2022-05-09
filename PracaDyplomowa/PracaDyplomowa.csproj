@@ -106,5 +106,32 @@
   <ItemGroup>
     <None Include="Properties\Images\computer_by_side.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\amdRyzen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\hdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\intelcore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\radeon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\ramfury.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\rtx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\ssd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\vegence.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
