@@ -17,11 +17,13 @@ namespace PracaDyplomowa
 
         private static ArrayList commandList = new ArrayList();
         private static Boolean IsStarted = false;
+        public bool IsKlawiatura = false;
+        public bool IsMonitor = false;
 
-        public Component procesor = new Component();
-        public Component kartaGraficzna = new Component();
-        public Component ram = new Component();
-        public Component dysk = new Component();
+        public Component procesor = null;
+        public Component kartaGraficzna = null;
+        public Component ram = null;
+        public Component dysk = null;
 
         public Form1()
         {
@@ -50,6 +52,10 @@ namespace PracaDyplomowa
                                         "\r\nLegenda:\r\n p - informacje o procesorze\r\n g - informacje o karcie graficznej\r\n" +
                                         " r - informacje o kościach RAM\r\n d - informacje o dysku pamięci"));
 
+            commandList.Add(new Command("cl",
+                                        "Czysci konsole",
+                                        "Czysci konsole do stanu początkowego czyli samego >"));
+
             //---------------------------------------------------------------------------------------
 
 
@@ -70,11 +76,8 @@ namespace PracaDyplomowa
         //Open edit window
         private void EditButton_Click(object sender, EventArgs e)
         {
-            if(IsStarted == false)
-            {
                 Form2 form2 = new Form2(this);
                 form2.ShowDialog();
-            }
         }
 
         //make font bigger in terminal
@@ -106,20 +109,35 @@ namespace PracaDyplomowa
         //start computer
         private async void StartButton_Click(object sender, EventArgs e)
         {
-            if(IsStarted == false)
+            if(IsStarted == false && CheckComputer())
             {
                 IsStarted = true;
                 StartButton.Enabled = false;
-                PictureboxIntro.Visible = true;
-                ProgressIntro.Visible = true;
+                
+                if (IsMonitor)
+                {
+                    PictureboxIntro.Visible = true;
+                    ProgressIntro.Visible = true;
+                    ProgressIntro.BringToFront();
+                }
+                
                 PowerLamp.BackColor = Color.Gold;
-                ProgressIntro.BringToFront();
                 Terminal.Text = "> ";
+                CheckComputer();
+                int n=1000;
+                if(dysk.nazwa != null)
+                {
+                    if (dysk.nazwa.Equals("SSD"))
+                        n = 400;
+                    else
+                        n = 800;
+                }
+
 
             int i = 0;
             while(i < 5)
             {
-                await PutTaskDelay(500);
+                await PutTaskDelay(n);
                 ProgressIntro.PerformStep();
                 i++;
             }
@@ -128,15 +146,23 @@ namespace PracaDyplomowa
 
                 //COMPUTER ON
                 PowerLamp.BackColor = Color.Lime;
-                PictureboxIntro.Visible = false;
-                ProgressIntro.Visible = false;
-                ProgressIntro.Value = 0;
+
+                if (IsMonitor)
+                {
+                    PictureboxIntro.Visible = false;
+                    ProgressIntro.Visible = false;
+                    ProgressIntro.Value = 0;
+                    Terminal.Visible = true;
+                    CommandLine.Visible = true;
+                    LabelCommandLane.Visible = true;
+                }
+
                 MinusSize.Enabled = true;
                 PlusSize.Enabled = true;
-                Terminal.Visible = true;
-                CommandLine.Visible = true;
-                LabelCommandLane.Visible = true;
                 StartButton.Enabled = true;
+
+                if (IsKlawiatura == false)
+                    CommandLine.Enabled = false;
             }
             else
             {
@@ -260,6 +286,38 @@ namespace PracaDyplomowa
             kartaGraficzna = ggrafa;
             ram = rram;
             dysk = ddysk;
+        }
+
+        //function to check if everything is connected
+        public bool CheckComputer()
+        {
+            bool goodOrNot=true;
+            if (procesor == null)
+                    goodOrNot = false;
+
+            if (kartaGraficzna == null)
+                    goodOrNot = false;
+
+            if (dysk == null)
+                    goodOrNot = false;
+
+            if (ram == null)
+                    goodOrNot = false;
+
+            return goodOrNot;
+        }
+
+        //function to set monitor status and keyboard status
+        public void turnMonitorAndKeyboard(bool mon, bool keyb)
+        {
+            IsMonitor = mon;
+            IsKlawiatura = keyb;
+        }
+
+        //change visibility of monitor's cable
+        public void KabelChange(bool kab)
+        {
+            pictureBoxKabel.Visible = kab;
         }
     }
 

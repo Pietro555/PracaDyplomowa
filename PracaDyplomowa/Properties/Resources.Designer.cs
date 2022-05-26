@@ -17,9 +17,9 @@ namespace PracaDyplomowa.Properties {
     /// </summary>
     // Ta klasa została automatycznie wygenerowana za pomocą klasy StronglyTypedResourceBuilder
     // przez narzędzie, takie jak ResGen lub Visual Studio.
-    // Aby dodać lub usunąć składową, edytuj plik ResX, a następnie ponownie uruchom narzędzie ResGen
+    // Aby dodać lub usunąć członka, edytuj plik .ResX, a następnie ponownie uruchom ResGen
     // z opcją /str lub ponownie utwórz projekt VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -116,6 +116,16 @@ namespace PracaDyplomowa.Properties {
         internal static System.Drawing.Bitmap intelcore {
             get {
                 object obj = ResourceManager.GetObject("intelcore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kabel {
+            get {
+                object obj = ResourceManager.GetObject("kabel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

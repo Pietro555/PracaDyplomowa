@@ -36,6 +36,7 @@ namespace PracaDyplomowa
             this.EditButton = new System.Windows.Forms.PictureBox();
             this.Computer = new System.Windows.Forms.PictureBox();
             this.PanelMonitor = new System.Windows.Forms.Panel();
+            this.pictureBoxKabel = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ProgressIntro = new System.Windows.Forms.ProgressBar();
             this.PictureboxIntro = new System.Windows.Forms.PictureBox();
@@ -49,6 +50,7 @@ namespace PracaDyplomowa
             ((System.ComponentModel.ISupportInitialize)(this.EditButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Computer)).BeginInit();
             this.PanelMonitor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureboxIntro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Monitor)).BeginInit();
             this.SuspendLayout();
@@ -115,6 +117,7 @@ namespace PracaDyplomowa
             // PanelMonitor
             // 
             this.PanelMonitor.BackColor = System.Drawing.Color.Transparent;
+            this.PanelMonitor.Controls.Add(this.pictureBoxKabel);
             this.PanelMonitor.Controls.Add(this.label1);
             this.PanelMonitor.Controls.Add(this.ProgressIntro);
             this.PanelMonitor.Controls.Add(this.PictureboxIntro);
@@ -129,6 +132,17 @@ namespace PracaDyplomowa
             this.PanelMonitor.Name = "PanelMonitor";
             this.PanelMonitor.Size = new System.Drawing.Size(651, 647);
             this.PanelMonitor.TabIndex = 1;
+            // 
+            // pictureBoxKabel
+            // 
+            this.pictureBoxKabel.Image = global::PracaDyplomowa.Properties.Resources.kabel;
+            this.pictureBoxKabel.Location = new System.Drawing.Point(0, 511);
+            this.pictureBoxKabel.Name = "pictureBoxKabel";
+            this.pictureBoxKabel.Size = new System.Drawing.Size(156, 149);
+            this.pictureBoxKabel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxKabel.TabIndex = 8;
+            this.pictureBoxKabel.TabStop = false;
+            this.pictureBoxKabel.Visible = false;
             // 
             // label1
             // 
@@ -247,7 +261,7 @@ namespace PracaDyplomowa
             this.ClientSize = new System.Drawing.Size(940, 647);
             this.Controls.Add(this.PanelMonitor);
             this.Controls.Add(this.PanelComputer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplikacja-Symulator Komputera PC";
@@ -256,6 +270,7 @@ namespace PracaDyplomowa
             ((System.ComponentModel.ISupportInitialize)(this.Computer)).EndInit();
             this.PanelMonitor.ResumeLayout(false);
             this.PanelMonitor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureboxIntro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Monitor)).EndInit();
             this.ResumeLayout(false);
@@ -279,6 +294,7 @@ namespace PracaDyplomowa
         private System.Windows.Forms.Panel PowerLamp;
         private System.Windows.Forms.ProgressBar ProgressIntro;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBoxKabel;
     }
 }
 
