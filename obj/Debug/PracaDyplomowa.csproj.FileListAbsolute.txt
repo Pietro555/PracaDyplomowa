@@ -1,0 +1,22 @@
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\bin\Debug\PracaDyplomowa.exe.config
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\bin\Debug\PracaDyplomowa.exe
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\bin\Debug\PracaDyplomowa.pdb
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\obj\Debug\PracaDyplomowa.csproj.AssemblyReference.cache
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\obj\Debug\PracaDyplomowa.Form1.resources
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\obj\Debug\PracaDyplomowa.Properties.Resources.resources
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\obj\Debug\PracaDyplomowa.csproj.GenerateResource.cache
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\obj\Debug\PracaDyplomowa.csproj.CoreCompileInputs.cache
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\obj\Debug\PracaDyplomowa.exe
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\obj\Debug\PracaDyplomowa.pdb
+D:\Visual Projects\PracaDyplomowa\PracaDyplomowa\obj\Debug\PracaDyplomowa.Form2.resources
+E:\PracaDyplomowa\bin\Debug\PracaDyplomowa.exe.config
+E:\PracaDyplomowa\obj\Debug\PracaDyplomowa.exe
+E:\PracaDyplomowa\obj\Debug\PracaDyplomowa.pdb
+E:\PracaDyplomowa\bin\Debug\PracaDyplomowa.exe
+E:\PracaDyplomowa\bin\Debug\PracaDyplomowa.pdb
+E:\PracaDyplomowa\obj\Debug\PracaDyplomowa.csprojResolveAssemblyReference.cache
+E:\PracaDyplomowa\obj\Debug\PracaDyplomowa.Form1.resources
+E:\PracaDyplomowa\obj\Debug\PracaDyplomowa.Form2.resources
+E:\PracaDyplomowa\obj\Debug\PracaDyplomowa.Properties.Resources.resources
+E:\PracaDyplomowa\obj\Debug\PracaDyplomowa.csproj.GenerateResource.Cache
+E:\PracaDyplomowa\obj\Debug\PracaDyplomowa.Form3Procesor.resources
