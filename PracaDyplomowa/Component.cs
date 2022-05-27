@@ -22,6 +22,14 @@ namespace PracaDyplomowa
             this.zdjecie = zdjecie;
         }
 
+        public Component(string nazwa, string specyfikacje, string producent)
+        {
+            this.nazwa = nazwa;
+            this.specyfikacje = specyfikacje;
+            this.producent = producent;
+            this.zdjecie = null;
+        }
+
         public Component()
         {}
 

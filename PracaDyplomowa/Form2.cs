@@ -69,8 +69,8 @@ namespace PracaDyplomowa
                 comboBoxDysk.Items.Add(c.ToString());
             }
 
-            Component furyBeast = new Component("RAM Fury Beast", "Specyfikacje fury beast", "Kingston", Properties.Resources.ramfury);
-            Component vengance = new Component("RAM Vengeance", "Specyfikacje vengena", "Corsair", Properties.Resources.vegence);
+            Component furyBeast = new Component("RAM Fury Beast", "Specyfikacje fury beast", "Kingston");
+            Component vengance = new Component("RAM Vengeance", "Specyfikacje vengena", "Corsair");
             ramy.Add(furyBeast);
             ramy.Add(vengance);
             
@@ -157,11 +157,14 @@ namespace PracaDyplomowa
         {
             if (comboBoxRAM.SelectedIndex != -1)
             {
-                int index = comboBoxRAM.SelectedIndex;
-                pictureBoxRam.Image = ramy.ElementAt(index).zdjecie;
+                pictureBoxRam1.Image = Properties.Resources.ram;
+                pictureBoxRam2.Image = Properties.Resources.ram;
             }
             else
-                pictureBoxRam.Image = null;
+            {
+                pictureBoxRam1.Image = null;
+                pictureBoxRam2.Image = null;
+            }
 
         }
 
@@ -259,6 +262,11 @@ namespace PracaDyplomowa
         {
             Form3Procesor form3 = new Form3Procesor(this);
             form3.ShowDialog();
+        }
+
+        private void pictureBoxDysk_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("To jest dysk",pictureBoxDysk);
         }
     }
 }

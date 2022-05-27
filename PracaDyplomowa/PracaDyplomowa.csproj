@@ -146,5 +146,11 @@
   <ItemGroup>
     <None Include="Properties\Images\kabel.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\Wnętrze.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\ram.JPG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -54,7 +54,7 @@ namespace PracaDyplomowa
 
             commandList.Add(new Command("cl",
                                         "Czysci konsole",
-                                        "Czysci konsole do stanu początkowego czyli samego >"));
+                                        "Czysci konsole do stanu początkowego czyli samego '>'"));
 
             //---------------------------------------------------------------------------------------
 
@@ -195,7 +195,7 @@ namespace PracaDyplomowa
                 Terminal.AppendText(CommandLine.Text + "\r\n");
 
 
-                if (CommandLine.Text.Contains("help"))
+                if (CommandLine.Text.StartsWith("help"))
                 {
                     foreach (Command c in commandList)
                     {
@@ -203,7 +203,7 @@ namespace PracaDyplomowa
 
                     }
                 }
-                else if (CommandLine.Text.Contains("man"))
+                else if (CommandLine.Text.StartsWith("man"))
                 {
                     foreach (Command c in commandList)
                     {
@@ -215,7 +215,7 @@ namespace PracaDyplomowa
 
                     }
                 }
-                else if (CommandLine.Text.Contains("comp"))
+                else if (CommandLine.Text.StartsWith("comp"))
                 {
                     bool UsedP = false, UsedG = false, UsedR = false, UsedD = false;
                     string text = "";
@@ -269,7 +269,7 @@ namespace PracaDyplomowa
 
                     Terminal.AppendText(text);
                 }
-                else if (CommandLine.Text.Contains("cl"))
+                else if (CommandLine.Text.Equals("cl"))
                 {
                     Terminal.Text = "";
                 }

@@ -29,7 +29,12 @@ namespace PracaDyplomowa
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddProcesor = new System.Windows.Forms.Button();
             this.labelMonitorConnect = new System.Windows.Forms.Label();
             this.labelKlawiaturaConnect = new System.Windows.Forms.Label();
             this.labelMonitor = new System.Windows.Forms.Label();
@@ -38,8 +43,9 @@ namespace PracaDyplomowa
             this.buttonWstecz = new System.Windows.Forms.Button();
             this.buttonAkceptuj = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBoxRam2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxProcesor = new System.Windows.Forms.PictureBox();
-            this.pictureBoxRam = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRam1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxDysk = new System.Windows.Forms.PictureBox();
             this.pictureBoxKartaGraf = new System.Windows.Forms.PictureBox();
             this.comboBoxDysk = new System.Windows.Forms.ComboBox();
@@ -51,14 +57,12 @@ namespace PracaDyplomowa
             this.comboBoxProcesor = new System.Windows.Forms.ComboBox();
             this.labelProcesor = new System.Windows.Forms.Label();
             this.PictureBoxComputerBySide = new System.Windows.Forms.PictureBox();
-            this.buttonAddProcesor = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProcesor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDysk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKartaGraf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxComputerBySide)).BeginInit();
@@ -93,6 +97,47 @@ namespace PracaDyplomowa
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(944, 651);
             this.panel1.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.button3.Location = new System.Drawing.Point(901, 372);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(34, 24);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "+";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.button2.Location = new System.Drawing.Point(901, 259);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 24);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "+";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.button1.Location = new System.Drawing.Point(901, 147);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 23);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddProcesor
+            // 
+            this.buttonAddProcesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonAddProcesor.Location = new System.Drawing.Point(901, 37);
+            this.buttonAddProcesor.Name = "buttonAddProcesor";
+            this.buttonAddProcesor.Size = new System.Drawing.Size(34, 23);
+            this.buttonAddProcesor.TabIndex = 25;
+            this.buttonAddProcesor.Text = "+";
+            this.buttonAddProcesor.UseVisualStyleBackColor = true;
+            this.buttonAddProcesor.Click += new System.EventHandler(this.buttonAddProcesor_Click);
             // 
             // labelMonitorConnect
             // 
@@ -178,8 +223,11 @@ namespace PracaDyplomowa
             // 
             // panel2
             // 
+            this.panel2.BackgroundImage = global::PracaDyplomowa.Properties.Resources.Wnętrze;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.pictureBoxRam2);
             this.panel2.Controls.Add(this.pictureBoxProcesor);
-            this.panel2.Controls.Add(this.pictureBoxRam);
+            this.panel2.Controls.Add(this.pictureBoxRam1);
             this.panel2.Controls.Add(this.pictureBoxDysk);
             this.panel2.Controls.Add(this.pictureBoxKartaGraf);
             this.panel2.Location = new System.Drawing.Point(36, 51);
@@ -187,39 +235,52 @@ namespace PracaDyplomowa
             this.panel2.Size = new System.Drawing.Size(486, 544);
             this.panel2.TabIndex = 17;
             // 
+            // pictureBoxRam2
+            // 
+            this.pictureBoxRam2.Location = new System.Drawing.Point(251, 184);
+            this.pictureBoxRam2.Name = "pictureBoxRam2";
+            this.pictureBoxRam2.Size = new System.Drawing.Size(10, 213);
+            this.pictureBoxRam2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxRam2.TabIndex = 14;
+            this.pictureBoxRam2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBoxRam2, "WITAM HELLLO");
+            // 
             // pictureBoxProcesor
             // 
             this.pictureBoxProcesor.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProcesor.Location = new System.Drawing.Point(0, 25);
+            this.pictureBoxProcesor.Location = new System.Drawing.Point(127, 217);
             this.pictureBoxProcesor.Name = "pictureBoxProcesor";
-            this.pictureBoxProcesor.Size = new System.Drawing.Size(255, 226);
+            this.pictureBoxProcesor.Size = new System.Drawing.Size(45, 52);
             this.pictureBoxProcesor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxProcesor.TabIndex = 10;
             this.pictureBoxProcesor.TabStop = false;
             // 
-            // pictureBoxRam
+            // pictureBoxRam1
             // 
-            this.pictureBoxRam.Location = new System.Drawing.Point(252, 292);
-            this.pictureBoxRam.Name = "pictureBoxRam";
-            this.pictureBoxRam.Size = new System.Drawing.Size(234, 214);
-            this.pictureBoxRam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxRam.TabIndex = 13;
-            this.pictureBoxRam.TabStop = false;
+            this.pictureBoxRam1.Location = new System.Drawing.Point(231, 184);
+            this.pictureBoxRam1.Name = "pictureBoxRam1";
+            this.pictureBoxRam1.Size = new System.Drawing.Size(10, 213);
+            this.pictureBoxRam1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxRam1.TabIndex = 13;
+            this.pictureBoxRam1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBoxRam1, "WITAM HELLLO");
             // 
             // pictureBoxDysk
             // 
-            this.pictureBoxDysk.Location = new System.Drawing.Point(252, 25);
+            this.pictureBoxDysk.Location = new System.Drawing.Point(349, 242);
             this.pictureBoxDysk.Name = "pictureBoxDysk";
-            this.pictureBoxDysk.Size = new System.Drawing.Size(234, 226);
+            this.pictureBoxDysk.Size = new System.Drawing.Size(134, 61);
             this.pictureBoxDysk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxDysk.TabIndex = 12;
             this.pictureBoxDysk.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBoxDysk, "Jestem Dyskiem");
+            this.pictureBoxDysk.MouseHover += new System.EventHandler(this.pictureBoxDysk_MouseHover);
             // 
             // pictureBoxKartaGraf
             // 
-            this.pictureBoxKartaGraf.Location = new System.Drawing.Point(0, 292);
+            this.pictureBoxKartaGraf.Location = new System.Drawing.Point(3, 384);
             this.pictureBoxKartaGraf.Name = "pictureBoxKartaGraf";
-            this.pictureBoxKartaGraf.Size = new System.Drawing.Size(255, 214);
+            this.pictureBoxKartaGraf.Size = new System.Drawing.Size(255, 61);
             this.pictureBoxKartaGraf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxKartaGraf.TabIndex = 11;
             this.pictureBoxKartaGraf.TabStop = false;
@@ -229,9 +290,9 @@ namespace PracaDyplomowa
             this.comboBoxDysk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDysk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxDysk.FormattingEnabled = true;
-            this.comboBoxDysk.Location = new System.Drawing.Point(636, 372);
+            this.comboBoxDysk.Location = new System.Drawing.Point(658, 372);
             this.comboBoxDysk.Name = "comboBoxDysk";
-            this.comboBoxDysk.Size = new System.Drawing.Size(258, 24);
+            this.comboBoxDysk.Size = new System.Drawing.Size(236, 24);
             this.comboBoxDysk.TabIndex = 8;
             this.comboBoxDysk.SelectedIndexChanged += new System.EventHandler(this.comboBoxDysk_SelectedIndexChanged);
             // 
@@ -250,9 +311,9 @@ namespace PracaDyplomowa
             this.comboBoxRAM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxRAM.FormattingEnabled = true;
-            this.comboBoxRAM.Location = new System.Drawing.Point(633, 259);
+            this.comboBoxRAM.Location = new System.Drawing.Point(658, 259);
             this.comboBoxRAM.Name = "comboBoxRAM";
-            this.comboBoxRAM.Size = new System.Drawing.Size(261, 24);
+            this.comboBoxRAM.Size = new System.Drawing.Size(236, 24);
             this.comboBoxRAM.TabIndex = 6;
             this.comboBoxRAM.SelectedIndexChanged += new System.EventHandler(this.comboBoxRAM_SelectedIndexChanged);
             // 
@@ -271,9 +332,9 @@ namespace PracaDyplomowa
             this.comboBoxGrafa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGrafa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxGrafa.FormattingEnabled = true;
-            this.comboBoxGrafa.Location = new System.Drawing.Point(633, 147);
+            this.comboBoxGrafa.Location = new System.Drawing.Point(658, 147);
             this.comboBoxGrafa.Name = "comboBoxGrafa";
-            this.comboBoxGrafa.Size = new System.Drawing.Size(261, 24);
+            this.comboBoxGrafa.Size = new System.Drawing.Size(236, 24);
             this.comboBoxGrafa.TabIndex = 4;
             this.comboBoxGrafa.SelectedIndexChanged += new System.EventHandler(this.comboBoxGrafa_SelectedIndexChanged);
             // 
@@ -292,9 +353,9 @@ namespace PracaDyplomowa
             this.comboBoxProcesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProcesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxProcesor.FormattingEnabled = true;
-            this.comboBoxProcesor.Location = new System.Drawing.Point(636, 37);
+            this.comboBoxProcesor.Location = new System.Drawing.Point(658, 37);
             this.comboBoxProcesor.Name = "comboBoxProcesor";
-            this.comboBoxProcesor.Size = new System.Drawing.Size(258, 24);
+            this.comboBoxProcesor.Size = new System.Drawing.Size(236, 24);
             this.comboBoxProcesor.TabIndex = 2;
             this.comboBoxProcesor.SelectedIndexChanged += new System.EventHandler(this.comboBoxProcesor_SelectedIndexChanged);
             // 
@@ -318,46 +379,10 @@ namespace PracaDyplomowa
             this.PictureBoxComputerBySide.TabIndex = 0;
             this.PictureBoxComputerBySide.TabStop = false;
             // 
-            // buttonAddProcesor
+            // toolTip1
             // 
-            this.buttonAddProcesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonAddProcesor.Location = new System.Drawing.Point(901, 37);
-            this.buttonAddProcesor.Name = "buttonAddProcesor";
-            this.buttonAddProcesor.Size = new System.Drawing.Size(34, 23);
-            this.buttonAddProcesor.TabIndex = 25;
-            this.buttonAddProcesor.Text = "+";
-            this.buttonAddProcesor.UseVisualStyleBackColor = true;
-            this.buttonAddProcesor.Click += new System.EventHandler(this.buttonAddProcesor_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button1.Location = new System.Drawing.Point(901, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button2.Location = new System.Drawing.Point(901, 259);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 24);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button3.Location = new System.Drawing.Point(901, 372);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(34, 24);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = true;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // Form2
             // 
@@ -374,8 +399,9 @@ namespace PracaDyplomowa
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProcesor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDysk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKartaGraf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxComputerBySide)).EndInit();
@@ -395,7 +421,7 @@ namespace PracaDyplomowa
         private System.Windows.Forms.Label labelRAM;
         private System.Windows.Forms.ComboBox comboBoxGrafa;
         private System.Windows.Forms.Label labelKartaGraficzna;
-        private System.Windows.Forms.PictureBox pictureBoxRam;
+        private System.Windows.Forms.PictureBox pictureBoxRam1;
         private System.Windows.Forms.PictureBox pictureBoxDysk;
         private System.Windows.Forms.PictureBox pictureBoxKartaGraf;
         private System.Windows.Forms.PictureBox pictureBoxProcesor;
@@ -411,5 +437,7 @@ namespace PracaDyplomowa
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonAddProcesor;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pictureBoxRam2;
     }
 }
