@@ -31,15 +31,20 @@ namespace PracaDyplomowa
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddKartaGraficzna = new System.Windows.Forms.Button();
+            this.buttonWczytajZPliku = new System.Windows.Forms.Button();
+            this.buttonZapiszDoPliku = new System.Windows.Forms.Button();
+            this.buttonDeleteDysk = new System.Windows.Forms.Button();
+            this.buttonDeleteRam = new System.Windows.Forms.Button();
+            this.buttonDeleteKartaGraficzna = new System.Windows.Forms.Button();
+            this.buttonDeleteProcesor = new System.Windows.Forms.Button();
+            this.buttonAddDysk = new System.Windows.Forms.Button();
+            this.buttonAddRam = new System.Windows.Forms.Button();
             this.buttonAddProcesor = new System.Windows.Forms.Button();
             this.labelMonitorConnect = new System.Windows.Forms.Label();
             this.labelKlawiaturaConnect = new System.Windows.Forms.Label();
             this.labelMonitor = new System.Windows.Forms.Label();
             this.labelKlawiatura = new System.Windows.Forms.Label();
-            this.buttonWyczysc = new System.Windows.Forms.Button();
             this.buttonWstecz = new System.Windows.Forms.Button();
             this.buttonAkceptuj = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,6 +63,7 @@ namespace PracaDyplomowa
             this.labelProcesor = new System.Windows.Forms.Label();
             this.PictureBoxComputerBySide = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam2)).BeginInit();
@@ -71,15 +77,20 @@ namespace PracaDyplomowa
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonAddKartaGraficzna);
+            this.panel1.Controls.Add(this.buttonWczytajZPliku);
+            this.panel1.Controls.Add(this.buttonZapiszDoPliku);
+            this.panel1.Controls.Add(this.buttonDeleteDysk);
+            this.panel1.Controls.Add(this.buttonDeleteRam);
+            this.panel1.Controls.Add(this.buttonDeleteKartaGraficzna);
+            this.panel1.Controls.Add(this.buttonDeleteProcesor);
+            this.panel1.Controls.Add(this.buttonAddDysk);
+            this.panel1.Controls.Add(this.buttonAddRam);
             this.panel1.Controls.Add(this.buttonAddProcesor);
             this.panel1.Controls.Add(this.labelMonitorConnect);
             this.panel1.Controls.Add(this.labelKlawiaturaConnect);
             this.panel1.Controls.Add(this.labelMonitor);
             this.panel1.Controls.Add(this.labelKlawiatura);
-            this.panel1.Controls.Add(this.buttonWyczysc);
             this.panel1.Controls.Add(this.buttonWstecz);
             this.panel1.Controls.Add(this.buttonAkceptuj);
             this.panel1.Controls.Add(this.panel2);
@@ -98,35 +109,106 @@ namespace PracaDyplomowa
             this.panel1.Size = new System.Drawing.Size(944, 651);
             this.panel1.TabIndex = 0;
             // 
-            // button3
+            // buttonAddKartaGraficzna
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button3.Location = new System.Drawing.Point(901, 372);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(34, 24);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonAddKartaGraficzna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonAddKartaGraficzna.Location = new System.Drawing.Point(901, 147);
+            this.buttonAddKartaGraficzna.Name = "buttonAddKartaGraficzna";
+            this.buttonAddKartaGraficzna.Size = new System.Drawing.Size(34, 23);
+            this.buttonAddKartaGraficzna.TabIndex = 35;
+            this.buttonAddKartaGraficzna.Text = "+";
+            this.buttonAddKartaGraficzna.UseVisualStyleBackColor = true;
+            this.buttonAddKartaGraficzna.Click += new System.EventHandler(this.buttonAddKartaGraficzna_Click);
             // 
-            // button2
+            // buttonWczytajZPliku
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button2.Location = new System.Drawing.Point(901, 259);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 24);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonWczytajZPliku.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonWczytajZPliku.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonWczytajZPliku.Location = new System.Drawing.Point(795, 586);
+            this.buttonWczytajZPliku.Name = "buttonWczytajZPliku";
+            this.buttonWczytajZPliku.Size = new System.Drawing.Size(124, 53);
+            this.buttonWczytajZPliku.TabIndex = 34;
+            this.buttonWczytajZPliku.Text = "Wczytaj konfiguracje";
+            this.buttonWczytajZPliku.UseVisualStyleBackColor = false;
+            this.buttonWczytajZPliku.Click += new System.EventHandler(this.buttonWczytajZPliku_Click);
             // 
-            // button1
+            // buttonZapiszDoPliku
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button1.Location = new System.Drawing.Point(901, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonZapiszDoPliku.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonZapiszDoPliku.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonZapiszDoPliku.Location = new System.Drawing.Point(655, 586);
+            this.buttonZapiszDoPliku.Name = "buttonZapiszDoPliku";
+            this.buttonZapiszDoPliku.Size = new System.Drawing.Size(124, 53);
+            this.buttonZapiszDoPliku.TabIndex = 33;
+            this.buttonZapiszDoPliku.Text = "Zapisz konfiguracje";
+            this.buttonZapiszDoPliku.UseVisualStyleBackColor = false;
+            this.buttonZapiszDoPliku.Click += new System.EventHandler(this.buttonZapiszDoPliku_Click);
+            // 
+            // buttonDeleteDysk
+            // 
+            this.buttonDeleteDysk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDeleteDysk.Location = new System.Drawing.Point(629, 372);
+            this.buttonDeleteDysk.Name = "buttonDeleteDysk";
+            this.buttonDeleteDysk.Size = new System.Drawing.Size(34, 24);
+            this.buttonDeleteDysk.TabIndex = 32;
+            this.buttonDeleteDysk.Text = "-";
+            this.buttonDeleteDysk.UseVisualStyleBackColor = true;
+            this.buttonDeleteDysk.Click += new System.EventHandler(this.buttonDeleteDysk_Click);
+            // 
+            // buttonDeleteRam
+            // 
+            this.buttonDeleteRam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDeleteRam.Location = new System.Drawing.Point(629, 259);
+            this.buttonDeleteRam.Name = "buttonDeleteRam";
+            this.buttonDeleteRam.Size = new System.Drawing.Size(34, 24);
+            this.buttonDeleteRam.TabIndex = 31;
+            this.buttonDeleteRam.Text = "-";
+            this.buttonDeleteRam.UseVisualStyleBackColor = true;
+            this.buttonDeleteRam.Click += new System.EventHandler(this.buttonDeleteRam_Click);
+            // 
+            // buttonDeleteKartaGraficzna
+            // 
+            this.buttonDeleteKartaGraficzna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDeleteKartaGraficzna.Location = new System.Drawing.Point(629, 147);
+            this.buttonDeleteKartaGraficzna.Name = "buttonDeleteKartaGraficzna";
+            this.buttonDeleteKartaGraficzna.Size = new System.Drawing.Size(34, 24);
+            this.buttonDeleteKartaGraficzna.TabIndex = 30;
+            this.buttonDeleteKartaGraficzna.Text = "-";
+            this.buttonDeleteKartaGraficzna.UseVisualStyleBackColor = true;
+            this.buttonDeleteKartaGraficzna.Click += new System.EventHandler(this.buttonDeleteKartaGraficzna_Click);
+            // 
+            // buttonDeleteProcesor
+            // 
+            this.buttonDeleteProcesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDeleteProcesor.Location = new System.Drawing.Point(629, 37);
+            this.buttonDeleteProcesor.Name = "buttonDeleteProcesor";
+            this.buttonDeleteProcesor.Size = new System.Drawing.Size(34, 24);
+            this.buttonDeleteProcesor.TabIndex = 29;
+            this.buttonDeleteProcesor.Text = "-";
+            this.buttonDeleteProcesor.UseVisualStyleBackColor = true;
+            this.buttonDeleteProcesor.Click += new System.EventHandler(this.buttonDeleteProcesor_Click);
+            // 
+            // buttonAddDysk
+            // 
+            this.buttonAddDysk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonAddDysk.Location = new System.Drawing.Point(901, 372);
+            this.buttonAddDysk.Name = "buttonAddDysk";
+            this.buttonAddDysk.Size = new System.Drawing.Size(34, 24);
+            this.buttonAddDysk.TabIndex = 28;
+            this.buttonAddDysk.Text = "+";
+            this.buttonAddDysk.UseVisualStyleBackColor = true;
+            this.buttonAddDysk.Click += new System.EventHandler(this.buttonAddDysk_Click);
+            // 
+            // buttonAddRam
+            // 
+            this.buttonAddRam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonAddRam.Location = new System.Drawing.Point(901, 259);
+            this.buttonAddRam.Name = "buttonAddRam";
+            this.buttonAddRam.Size = new System.Drawing.Size(34, 24);
+            this.buttonAddRam.TabIndex = 27;
+            this.buttonAddRam.Text = "+";
+            this.buttonAddRam.UseVisualStyleBackColor = true;
+            this.buttonAddRam.Click += new System.EventHandler(this.buttonAddRam_Click);
             // 
             // buttonAddProcesor
             // 
@@ -145,7 +227,7 @@ namespace PracaDyplomowa
             this.labelMonitorConnect.BackColor = System.Drawing.Color.Red;
             this.labelMonitorConnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelMonitorConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelMonitorConnect.Location = new System.Drawing.Point(817, 489);
+            this.labelMonitorConnect.Location = new System.Drawing.Point(819, 461);
             this.labelMonitorConnect.Name = "labelMonitorConnect";
             this.labelMonitorConnect.Size = new System.Drawing.Size(85, 16);
             this.labelMonitorConnect.TabIndex = 24;
@@ -158,7 +240,7 @@ namespace PracaDyplomowa
             this.labelKlawiaturaConnect.BackColor = System.Drawing.Color.Red;
             this.labelKlawiaturaConnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelKlawiaturaConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelKlawiaturaConnect.Location = new System.Drawing.Point(677, 489);
+            this.labelKlawiaturaConnect.Location = new System.Drawing.Point(677, 461);
             this.labelKlawiaturaConnect.Name = "labelKlawiaturaConnect";
             this.labelKlawiaturaConnect.Size = new System.Drawing.Size(85, 16);
             this.labelKlawiaturaConnect.TabIndex = 23;
@@ -185,25 +267,13 @@ namespace PracaDyplomowa
             this.labelKlawiatura.TabIndex = 21;
             this.labelKlawiatura.Text = "Klawiatura";
             // 
-            // buttonWyczysc
-            // 
-            this.buttonWyczysc.BackColor = System.Drawing.Color.Transparent;
-            this.buttonWyczysc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonWyczysc.Location = new System.Drawing.Point(730, 559);
-            this.buttonWyczysc.Name = "buttonWyczysc";
-            this.buttonWyczysc.Size = new System.Drawing.Size(124, 36);
-            this.buttonWyczysc.TabIndex = 20;
-            this.buttonWyczysc.Text = "Wyczysc";
-            this.buttonWyczysc.UseVisualStyleBackColor = false;
-            this.buttonWyczysc.Click += new System.EventHandler(this.buttonWyczysc_Click);
-            // 
             // buttonWstecz
             // 
             this.buttonWstecz.BackColor = System.Drawing.Color.LightCoral;
             this.buttonWstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonWstecz.Location = new System.Drawing.Point(808, 603);
+            this.buttonWstecz.Location = new System.Drawing.Point(795, 520);
             this.buttonWstecz.Name = "buttonWstecz";
-            this.buttonWstecz.Size = new System.Drawing.Size(124, 36);
+            this.buttonWstecz.Size = new System.Drawing.Size(124, 46);
             this.buttonWstecz.TabIndex = 19;
             this.buttonWstecz.Text = "Wstecz";
             this.buttonWstecz.UseVisualStyleBackColor = false;
@@ -213,9 +283,9 @@ namespace PracaDyplomowa
             // 
             this.buttonAkceptuj.BackColor = System.Drawing.Color.LightGreen;
             this.buttonAkceptuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonAkceptuj.Location = new System.Drawing.Point(658, 603);
+            this.buttonAkceptuj.Location = new System.Drawing.Point(655, 520);
             this.buttonAkceptuj.Name = "buttonAkceptuj";
-            this.buttonAkceptuj.Size = new System.Drawing.Size(124, 36);
+            this.buttonAkceptuj.Size = new System.Drawing.Size(124, 46);
             this.buttonAkceptuj.TabIndex = 18;
             this.buttonAkceptuj.Text = "Akceptuj";
             this.buttonAkceptuj.UseVisualStyleBackColor = false;
@@ -278,9 +348,9 @@ namespace PracaDyplomowa
             // 
             // pictureBoxKartaGraf
             // 
-            this.pictureBoxKartaGraf.Location = new System.Drawing.Point(3, 384);
+            this.pictureBoxKartaGraf.Location = new System.Drawing.Point(0, 378);
             this.pictureBoxKartaGraf.Name = "pictureBoxKartaGraf";
-            this.pictureBoxKartaGraf.Size = new System.Drawing.Size(255, 61);
+            this.pictureBoxKartaGraf.Size = new System.Drawing.Size(225, 48);
             this.pictureBoxKartaGraf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxKartaGraf.TabIndex = 11;
             this.pictureBoxKartaGraf.TabStop = false;
@@ -290,9 +360,9 @@ namespace PracaDyplomowa
             this.comboBoxDysk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDysk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxDysk.FormattingEnabled = true;
-            this.comboBoxDysk.Location = new System.Drawing.Point(658, 372);
+            this.comboBoxDysk.Location = new System.Drawing.Point(668, 372);
             this.comboBoxDysk.Name = "comboBoxDysk";
-            this.comboBoxDysk.Size = new System.Drawing.Size(236, 24);
+            this.comboBoxDysk.Size = new System.Drawing.Size(226, 24);
             this.comboBoxDysk.TabIndex = 8;
             this.comboBoxDysk.SelectedIndexChanged += new System.EventHandler(this.comboBoxDysk_SelectedIndexChanged);
             // 
@@ -311,9 +381,9 @@ namespace PracaDyplomowa
             this.comboBoxRAM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxRAM.FormattingEnabled = true;
-            this.comboBoxRAM.Location = new System.Drawing.Point(658, 259);
+            this.comboBoxRAM.Location = new System.Drawing.Point(668, 259);
             this.comboBoxRAM.Name = "comboBoxRAM";
-            this.comboBoxRAM.Size = new System.Drawing.Size(236, 24);
+            this.comboBoxRAM.Size = new System.Drawing.Size(226, 24);
             this.comboBoxRAM.TabIndex = 6;
             this.comboBoxRAM.SelectedIndexChanged += new System.EventHandler(this.comboBoxRAM_SelectedIndexChanged);
             // 
@@ -332,9 +402,9 @@ namespace PracaDyplomowa
             this.comboBoxGrafa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGrafa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxGrafa.FormattingEnabled = true;
-            this.comboBoxGrafa.Location = new System.Drawing.Point(658, 147);
+            this.comboBoxGrafa.Location = new System.Drawing.Point(668, 147);
             this.comboBoxGrafa.Name = "comboBoxGrafa";
-            this.comboBoxGrafa.Size = new System.Drawing.Size(236, 24);
+            this.comboBoxGrafa.Size = new System.Drawing.Size(226, 24);
             this.comboBoxGrafa.TabIndex = 4;
             this.comboBoxGrafa.SelectedIndexChanged += new System.EventHandler(this.comboBoxGrafa_SelectedIndexChanged);
             // 
@@ -353,9 +423,9 @@ namespace PracaDyplomowa
             this.comboBoxProcesor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProcesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxProcesor.FormattingEnabled = true;
-            this.comboBoxProcesor.Location = new System.Drawing.Point(658, 37);
+            this.comboBoxProcesor.Location = new System.Drawing.Point(668, 37);
             this.comboBoxProcesor.Name = "comboBoxProcesor";
-            this.comboBoxProcesor.Size = new System.Drawing.Size(236, 24);
+            this.comboBoxProcesor.Size = new System.Drawing.Size(226, 24);
             this.comboBoxProcesor.TabIndex = 2;
             this.comboBoxProcesor.SelectedIndexChanged += new System.EventHandler(this.comboBoxProcesor_SelectedIndexChanged);
             // 
@@ -428,16 +498,22 @@ namespace PracaDyplomowa
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonWstecz;
         private System.Windows.Forms.Button buttonAkceptuj;
-        private System.Windows.Forms.Button buttonWyczysc;
         private System.Windows.Forms.Label labelMonitorConnect;
         private System.Windows.Forms.Label labelKlawiaturaConnect;
         private System.Windows.Forms.Label labelMonitor;
         private System.Windows.Forms.Label labelKlawiatura;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddDysk;
+        private System.Windows.Forms.Button buttonAddRam;
         private System.Windows.Forms.Button buttonAddProcesor;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBoxRam2;
+        private System.Windows.Forms.Button buttonDeleteDysk;
+        private System.Windows.Forms.Button buttonDeleteRam;
+        private System.Windows.Forms.Button buttonDeleteKartaGraficzna;
+        private System.Windows.Forms.Button buttonDeleteProcesor;
+        private System.Windows.Forms.Button buttonWczytajZPliku;
+        private System.Windows.Forms.Button buttonZapiszDoPliku;
+        private System.Windows.Forms.Button buttonAddKartaGraficzna;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }

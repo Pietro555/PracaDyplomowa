@@ -265,6 +265,7 @@ namespace PracaDyplomowa
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplikacja-Symulator Komputera PC";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelComputer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EditButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Computer)).EndInit();

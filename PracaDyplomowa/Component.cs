@@ -30,8 +30,6 @@ namespace PracaDyplomowa
             this.zdjecie = null;
         }
 
-        public Component()
-        {}
 
         override
         public string ToString()
@@ -39,29 +37,10 @@ namespace PracaDyplomowa
             return this.nazwa;
         }
 
-        public string GetNazwa()
-        {
-            return this.nazwa;
-        }
-
-        public string GetSpecyfikacje()
-        {
-            return this.specyfikacje;
-        }
-
-        public Image GetZdjecie()
-        {
-            return this.zdjecie;
-        }
-
-        public string GetProducent()
-        {
-            return this.producent;
-        }
-
         public string GetInfo()
         {
-            return this.nazwa+", "+this.specyfikacje+", "+this.producent;
+            string info = ""+ this.nazwa+";"+ this.specyfikacje + ";" + this.producent;
+            return info;
         }
 
     }

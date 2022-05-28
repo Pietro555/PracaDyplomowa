@@ -25,6 +25,11 @@ namespace PracaDyplomowa
         public Component ram = null;
         public Component dysk = null;
 
+        public List<Component> procesory = new List<Component>();
+        public List<Component> kartyGraficzne = new List<Component>();
+        public List<Component> dyski = new List<Component>();
+        public List<Component> ramy = new List<Component>();
+
         public Form1()
         {
             InitializeComponent();
@@ -127,9 +132,9 @@ namespace PracaDyplomowa
                 int n=1000;
                 if(dysk.nazwa != null)
                 {
-                    if (dysk.nazwa.Equals("SSD"))
+                    if (dysk.nazwa.ToLower().Contains("ssd"))
                         n = 400;
-                    else
+                    else if (dysk.nazwa.ToLower().Contains("hddd"))
                         n = 800;
                 }
 
@@ -318,6 +323,29 @@ namespace PracaDyplomowa
         public void KabelChange(bool kab)
         {
             pictureBoxKabel.Visible = kab;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Component intelCore = new Component("Intel core", "Specyfikacje intel cora", "Intel", Properties.Resources.intelcore);
+            Component amdRyzen = new Component("AMD ryzen", "Specyfikacje AMD ryzena", "AMD", Properties.Resources.amdRyzen);
+            procesory.Add(intelCore);
+            procesory.Add(amdRyzen);
+
+            Component geforceRTX = new Component("Gigabyte GeForce RTX 3060", "Specyfikacje RTXa", "Gigabyte", Properties.Resources.rtx);
+            Component AmdRadeon = new Component("Gigabyte GeForce GTX 1060 Windforce", "Specyfikacje windforca", "Gigabyte", Properties.Resources.windforce);
+            kartyGraficzne.Add(geforceRTX);
+            kartyGraficzne.Add(AmdRadeon);
+
+            Component hdd = new Component("HDD", "Specyfikacje HDD", "Toshiba", Properties.Resources.hdd);
+            Component ssd = new Component("SSD", "Specyfikacje SSD", "Western Digital", Properties.Resources.ssd);
+            dyski.Add(hdd);
+            dyski.Add(ssd);
+
+            Component furyBeast = new Component("RAM Fury Beast", "Specyfikacje fury beast", "Kingston");
+            Component vengance = new Component("RAM Vengeance", "Specyfikacje vengena", "Corsair");
+            ramy.Add(furyBeast);
+            ramy.Add(vengance);
         }
     }
 

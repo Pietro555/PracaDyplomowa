@@ -193,6 +193,16 @@ namespace PracaDyplomowa.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap windforce {
+            get {
+                object obj = ResourceManager.GetObject("windforce", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Wnętrze {
             get {
                 object obj = ResourceManager.GetObject("Wnętrze", resourceCulture);
