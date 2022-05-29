@@ -72,7 +72,7 @@ namespace PracaDyplomowa
                         }
                 }  
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 switch (typ)
                 {

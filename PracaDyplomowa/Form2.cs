@@ -36,7 +36,6 @@ namespace PracaDyplomowa
             this.Paint += new PaintEventHandler(GradientBackground);
 
             fm1 = f;
-           
 
             this.Invalidate();
         }
@@ -227,6 +226,8 @@ namespace PracaDyplomowa
                 labelMonitorConnect.BackColor = Color.Green;
                 MonitorConnect = true;
             }
+
+            labelPopKartaGraficzna.BringToFront();
         }
 
         //open form3 to add procesor
@@ -255,11 +256,6 @@ namespace PracaDyplomowa
         {
             Form3 form3d = new Form3(this, 4);
             form3d.ShowDialog();
-        }
-
-        private void pictureBoxDysk_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.Show("To jest dysk",pictureBoxDysk);
         }
 
         //delete procesor
@@ -499,5 +495,170 @@ namespace PracaDyplomowa
                 }
             }
         }
+
+        //########## hovers for names of components###############################
+   
+        private void pictureBoxProcesor_MouseEnter(object sender, EventArgs e)
+        {
+            string n;
+            if (comboBoxProcesor.Text != null)
+            {
+                n = "" + comboBoxProcesor.Text;
+                labelPopProcesor.Text = "Procesor \n" + n;
+                labelPopProcesor.Visible = true;
+            }
+            else
+            {
+                labelPopProcesor.Text = "Procesor";
+                labelPopProcesor.Visible = true;
+            }
+        }
+
+        private void pictureBoxProcesor_MouseLeave_1(object sender, EventArgs e)
+        {
+            labelPopProcesor.Visible = false;
+        }
+
+        private void pictureBoxDysk_MouseEnter(object sender, EventArgs e)
+        {
+            string n;
+            if (comboBoxDysk.Text != null)
+            {
+                n = "" + comboBoxDysk.Text;
+                labelPopDyskPamieci.Text = "Dysk pamięci \n" + n;
+            }
+            else
+            {
+                labelPopDyskPamieci.Text = "Dysk Pamięci"; 
+            }
+            labelPopDyskPamieci.Visible = true;
+        }
+
+        private void pictureBoxDysk_MouseLeave(object sender, EventArgs e)
+        {
+            labelPopDyskPamieci.Visible = false;
+        }
+
+        private void pictureBoxKartaGraf_MouseEnter(object sender, EventArgs e)
+        {
+            string n;
+            if (comboBoxGrafa.Text != null)
+            {
+                n = "" + comboBoxGrafa.Text;
+                labelPopKartaGraficzna.Text = "Karta Graficzna \n" + n;
+                
+            }
+            else
+            {
+                labelPopKartaGraficzna.Text = "Karta Graficzna";
+            }
+            labelPopKartaGraficzna.Visible = true;
+        }
+
+        private void pictureBoxKartaGraf_MouseLeave(object sender, EventArgs e)
+        {
+            labelPopKartaGraficzna.Visible = false;
+        }
+
+        private void pictureBoxRam1_MouseEnter(object sender, EventArgs e)
+        {
+            string n;
+            if (comboBoxRAM.Text != null)
+            {
+                n = "" + comboBoxRAM.Text;
+                labelPopRam.Text = "Pamięć RAM \n" + n;
+            }
+            else
+            {
+                labelPopRam.Text = "Pamięć Ram";
+            }
+            labelPopRam.Visible = true;
+        }
+
+        private void pictureBoxRam2_MouseEnter(object sender, EventArgs e)
+        {
+            string n;
+            if (comboBoxRAM.Text != null)
+            {
+                n = "" + comboBoxRAM.Text;
+                labelPopRam.Text = "Pamięć RAM \n" + n;
+            }
+            else
+            {
+                labelPopRam.Text = "Pamięć Ram";
+            }
+            labelPopRam.Visible = true;
+        }
+
+        private void pictureBoxRam1_MouseLeave(object sender, EventArgs e)
+        {
+            labelPopRam.Visible = false;
+        }
+
+        private void pictureBoxRam2_MouseLeave(object sender, EventArgs e)
+        {
+            labelPopRam.Visible = false;
+        }
+
+        private void pictureBoxNapedyOptyczne_MouseEnter(object sender, EventArgs e)
+        {
+            labelPopNapendyOptyczne.Visible = true;
+        }
+
+        private void pictureBoxNapedyOptyczne_MouseLeave(object sender, EventArgs e)
+        {
+            labelPopNapendyOptyczne.Visible = false;
+        }
+
+        private void pictureBoxChipsetNorth_MouseEnter(object sender, EventArgs e)
+        {
+            labelPopChipsetNorth.Visible = true;
+        }
+
+        private void pictureBoxChipsetNorth_MouseLeave(object sender, EventArgs e)
+        {
+            labelPopChipsetNorth.Visible = false;
+        }
+
+        private void pictureBoxChipsetSouth_MouseEnter(object sender, EventArgs e)
+        {
+            labelPopChipsetSouth.Visible = true;
+        }
+
+        private void pictureBoxChipsetSouth_MouseLeave(object sender, EventArgs e)
+        {
+            labelPopChipsetSouth.Visible = false;
+        }
+
+        private void pictureBoxZasilacz_MouseEnter(object sender, EventArgs e)
+        {
+            labelPopZasilacz.Visible = true;
+        }
+
+        private void pictureBoxZasilacz_MouseLeave(object sender, EventArgs e)
+        {
+            labelPopZasilacz.Visible = false;
+        }
+
+        private void pictureBoxKartaSieciowa_MouseEnter(object sender, EventArgs e)
+        {
+            labelPopSieciowa.Visible = true;
+        }
+
+        private void pictureBoxKartaSieciowa_MouseLeave(object sender, EventArgs e)
+        {
+            labelPopSieciowa.Visible = false;
+        }
+
+        private void pictureBoxBateria_MouseEnter(object sender, EventArgs e)
+        {
+            labelPopBateria.Visible = true;
+        }
+
+        private void pictureBoxBateria_MouseLeave(object sender, EventArgs e)
+        {
+            labelPopBateria.Visible = false;
+        }
+        //##################################################
     }
 }
