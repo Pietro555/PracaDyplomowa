@@ -234,7 +234,10 @@ namespace PracaDyplomowa
         private void buttonAddProcesor_Click(object sender, EventArgs e)
         {
             Form3 form3p = new Form3(this,1);
-            form3p.ShowDialog();
+
+            form3p.Location = new Point(this.Size.Width + form3p.Size.Width, this.Size.Height/2);
+            form3p.ShowDialog(this);
+            
         }
 
         //open form3 to add kartaGraficzna
@@ -659,6 +662,7 @@ namespace PracaDyplomowa
         {
             labelPopBateria.Visible = false;
         }
+
         //##################################################
     }
 }

@@ -118,6 +118,7 @@ namespace PracaDyplomowa
             {
                 IsStarted = true;
                 StartButton.Enabled = false;
+                EditButton.Enabled = false;
                 
                 if (IsMonitor)
                 {
@@ -166,6 +167,9 @@ namespace PracaDyplomowa
                 PlusSize.Enabled = true;
                 StartButton.Enabled = true;
 
+                if (IsKlawiatura == true)
+                    CommandLine.Enabled = true;
+
                 if (IsKlawiatura == false)
                     CommandLine.Enabled = false;
             }
@@ -180,6 +184,7 @@ namespace PracaDyplomowa
                 LabelCommandLane.Visible = false;
                 IsStarted = false;
                 StartButton.Enabled = true;
+                EditButton.Enabled = true ;
             }
 
         }

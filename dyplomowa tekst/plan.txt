@@ -1,0 +1,15 @@
+ max 30 + 5
+
+teoria 15
+-Historia komputerów 	5
+-Komputer Ias 		5
+ -von Neuman		2,5
+ -IAS			2,5
+-układy cyfrowe 	5
+ -Bramki logiczne	2
+ -Przerzutniki		1
+ -Liczniki		1
+ -Rejestr		1
+
+praktyka 15
+

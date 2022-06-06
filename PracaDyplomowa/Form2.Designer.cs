@@ -47,6 +47,23 @@ namespace PracaDyplomowa
             this.buttonWstecz = new System.Windows.Forms.Button();
             this.buttonAkceptuj = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelPopBateria = new System.Windows.Forms.Label();
+            this.pictureBoxBateria = new System.Windows.Forms.PictureBox();
+            this.labelPopSieciowa = new System.Windows.Forms.Label();
+            this.pictureBoxKartaSieciowa = new System.Windows.Forms.PictureBox();
+            this.pictureBoxZasilacz = new System.Windows.Forms.PictureBox();
+            this.pictureBoxChipsetSouth = new System.Windows.Forms.PictureBox();
+            this.pictureBoxChipsetNorth = new System.Windows.Forms.PictureBox();
+            this.labelPopPlytaGlowna = new System.Windows.Forms.Label();
+            this.labelPopNapendyOptyczne = new System.Windows.Forms.Label();
+            this.labelPopChipsetSouth = new System.Windows.Forms.Label();
+            this.pictureBoxNapedyOptyczne = new System.Windows.Forms.PictureBox();
+            this.labelPopZasilacz = new System.Windows.Forms.Label();
+            this.labelPopRam = new System.Windows.Forms.Label();
+            this.labelPopChipsetNorth = new System.Windows.Forms.Label();
+            this.labelPopKartaGraficzna = new System.Windows.Forms.Label();
+            this.labelPopDyskPamieci = new System.Windows.Forms.Label();
+            this.labelPopProcesor = new System.Windows.Forms.Label();
             this.pictureBoxRam2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxProcesor = new System.Windows.Forms.PictureBox();
             this.pictureBoxRam1 = new System.Windows.Forms.PictureBox();
@@ -62,37 +79,20 @@ namespace PracaDyplomowa
             this.labelProcesor = new System.Windows.Forms.Label();
             this.PictureBoxComputerBySide = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.labelPopDyskPamieci = new System.Windows.Forms.Label();
-            this.labelPopProcesor = new System.Windows.Forms.Label();
-            this.labelPopKartaGraficzna = new System.Windows.Forms.Label();
-            this.labelPopRam = new System.Windows.Forms.Label();
-            this.labelPopZasilacz = new System.Windows.Forms.Label();
-            this.labelPopNapendyOptyczne = new System.Windows.Forms.Label();
-            this.labelPopChipsetNorth = new System.Windows.Forms.Label();
-            this.labelPopChipsetSouth = new System.Windows.Forms.Label();
-            this.labelPopPlytaGlowna = new System.Windows.Forms.Label();
-            this.pictureBoxNapedyOptyczne = new System.Windows.Forms.PictureBox();
-            this.pictureBoxChipsetNorth = new System.Windows.Forms.PictureBox();
-            this.pictureBoxChipsetSouth = new System.Windows.Forms.PictureBox();
-            this.pictureBoxZasilacz = new System.Windows.Forms.PictureBox();
-            this.pictureBoxKartaSieciowa = new System.Windows.Forms.PictureBox();
-            this.labelPopSieciowa = new System.Windows.Forms.Label();
-            this.pictureBoxBateria = new System.Windows.Forms.PictureBox();
-            this.labelPopBateria = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBateria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKartaSieciowa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZasilacz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChipsetSouth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChipsetNorth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNapedyOptyczne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProcesor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDysk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKartaGraf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxComputerBySide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNapedyOptyczne)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChipsetNorth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChipsetSouth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZasilacz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKartaSieciowa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBateria)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -343,6 +343,210 @@ namespace PracaDyplomowa
             this.panel2.Size = new System.Drawing.Size(486, 544);
             this.panel2.TabIndex = 17;
             // 
+            // labelPopBateria
+            // 
+            this.labelPopBateria.AutoSize = true;
+            this.labelPopBateria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopBateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelPopBateria.Location = new System.Drawing.Point(247, 366);
+            this.labelPopBateria.Name = "labelPopBateria";
+            this.labelPopBateria.Size = new System.Drawing.Size(60, 20);
+            this.labelPopBateria.TabIndex = 29;
+            this.labelPopBateria.Text = "Bateria";
+            this.labelPopBateria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPopBateria.Visible = false;
+            // 
+            // pictureBoxBateria
+            // 
+            this.pictureBoxBateria.Location = new System.Drawing.Point(266, 389);
+            this.pictureBoxBateria.Name = "pictureBoxBateria";
+            this.pictureBoxBateria.Size = new System.Drawing.Size(26, 29);
+            this.pictureBoxBateria.TabIndex = 28;
+            this.pictureBoxBateria.TabStop = false;
+            this.pictureBoxBateria.MouseEnter += new System.EventHandler(this.pictureBoxBateria_MouseEnter);
+            this.pictureBoxBateria.MouseLeave += new System.EventHandler(this.pictureBoxBateria_MouseLeave);
+            // 
+            // labelPopSieciowa
+            // 
+            this.labelPopSieciowa.AutoSize = true;
+            this.labelPopSieciowa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopSieciowa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelPopSieciowa.Location = new System.Drawing.Point(40, 520);
+            this.labelPopSieciowa.Name = "labelPopSieciowa";
+            this.labelPopSieciowa.Size = new System.Drawing.Size(114, 20);
+            this.labelPopSieciowa.TabIndex = 27;
+            this.labelPopSieciowa.Text = "Karta Sieciowa";
+            this.labelPopSieciowa.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPopSieciowa.Visible = false;
+            // 
+            // pictureBoxKartaSieciowa
+            // 
+            this.pictureBoxKartaSieciowa.Location = new System.Drawing.Point(32, 479);
+            this.pictureBoxKartaSieciowa.Name = "pictureBoxKartaSieciowa";
+            this.pictureBoxKartaSieciowa.Size = new System.Drawing.Size(139, 29);
+            this.pictureBoxKartaSieciowa.TabIndex = 26;
+            this.pictureBoxKartaSieciowa.TabStop = false;
+            this.pictureBoxKartaSieciowa.MouseEnter += new System.EventHandler(this.pictureBoxKartaSieciowa_MouseEnter);
+            this.pictureBoxKartaSieciowa.MouseLeave += new System.EventHandler(this.pictureBoxKartaSieciowa_MouseLeave);
+            // 
+            // pictureBoxZasilacz
+            // 
+            this.pictureBoxZasilacz.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxZasilacz.Name = "pictureBoxZasilacz";
+            this.pictureBoxZasilacz.Size = new System.Drawing.Size(188, 120);
+            this.pictureBoxZasilacz.TabIndex = 25;
+            this.pictureBoxZasilacz.TabStop = false;
+            this.pictureBoxZasilacz.MouseEnter += new System.EventHandler(this.pictureBoxZasilacz_MouseEnter);
+            this.pictureBoxZasilacz.MouseLeave += new System.EventHandler(this.pictureBoxZasilacz_MouseLeave);
+            // 
+            // pictureBoxChipsetSouth
+            // 
+            this.pictureBoxChipsetSouth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxChipsetSouth.Location = new System.Drawing.Point(217, 427);
+            this.pictureBoxChipsetSouth.Name = "pictureBoxChipsetSouth";
+            this.pictureBoxChipsetSouth.Size = new System.Drawing.Size(28, 39);
+            this.pictureBoxChipsetSouth.TabIndex = 24;
+            this.pictureBoxChipsetSouth.TabStop = false;
+            this.pictureBoxChipsetSouth.MouseEnter += new System.EventHandler(this.pictureBoxChipsetSouth_MouseEnter);
+            this.pictureBoxChipsetSouth.MouseLeave += new System.EventHandler(this.pictureBoxChipsetSouth_MouseLeave);
+            // 
+            // pictureBoxChipsetNorth
+            // 
+            this.pictureBoxChipsetNorth.Location = new System.Drawing.Point(152, 333);
+            this.pictureBoxChipsetNorth.Name = "pictureBoxChipsetNorth";
+            this.pictureBoxChipsetNorth.Size = new System.Drawing.Size(51, 46);
+            this.pictureBoxChipsetNorth.TabIndex = 23;
+            this.pictureBoxChipsetNorth.TabStop = false;
+            this.pictureBoxChipsetNorth.MouseEnter += new System.EventHandler(this.pictureBoxChipsetNorth_MouseEnter);
+            this.pictureBoxChipsetNorth.MouseLeave += new System.EventHandler(this.pictureBoxChipsetNorth_MouseLeave);
+            // 
+            // labelPopPlytaGlowna
+            // 
+            this.labelPopPlytaGlowna.AutoSize = true;
+            this.labelPopPlytaGlowna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopPlytaGlowna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelPopPlytaGlowna.Location = new System.Drawing.Point(3, 152);
+            this.labelPopPlytaGlowna.Name = "labelPopPlytaGlowna";
+            this.labelPopPlytaGlowna.Size = new System.Drawing.Size(113, 40);
+            this.labelPopPlytaGlowna.TabIndex = 0;
+            this.labelPopPlytaGlowna.Text = "Płyta Główna\r\nACER EG31M";
+            this.labelPopPlytaGlowna.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelPopNapendyOptyczne
+            // 
+            this.labelPopNapendyOptyczne.AutoSize = true;
+            this.labelPopNapendyOptyczne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopNapendyOptyczne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelPopNapendyOptyczne.Location = new System.Drawing.Point(345, 98);
+            this.labelPopNapendyOptyczne.Name = "labelPopNapendyOptyczne";
+            this.labelPopNapendyOptyczne.Size = new System.Drawing.Size(134, 20);
+            this.labelPopNapendyOptyczne.TabIndex = 21;
+            this.labelPopNapendyOptyczne.Text = "Napędy Optyczne";
+            this.labelPopNapendyOptyczne.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPopNapendyOptyczne.Visible = false;
+            // 
+            // labelPopChipsetSouth
+            // 
+            this.labelPopChipsetSouth.AutoSize = true;
+            this.labelPopChipsetSouth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopChipsetSouth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelPopChipsetSouth.Location = new System.Drawing.Point(179, 469);
+            this.labelPopChipsetSouth.Name = "labelPopChipsetSouth";
+            this.labelPopChipsetSouth.Size = new System.Drawing.Size(144, 40);
+            this.labelPopChipsetSouth.TabIndex = 3;
+            this.labelPopChipsetSouth.Text = "Chipset\r\nMostek południowy";
+            this.labelPopChipsetSouth.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPopChipsetSouth.Visible = false;
+            // 
+            // pictureBoxNapedyOptyczne
+            // 
+            this.pictureBoxNapedyOptyczne.Location = new System.Drawing.Point(330, 0);
+            this.pictureBoxNapedyOptyczne.Name = "pictureBoxNapedyOptyczne";
+            this.pictureBoxNapedyOptyczne.Size = new System.Drawing.Size(156, 232);
+            this.pictureBoxNapedyOptyczne.TabIndex = 22;
+            this.pictureBoxNapedyOptyczne.TabStop = false;
+            this.pictureBoxNapedyOptyczne.MouseEnter += new System.EventHandler(this.pictureBoxNapedyOptyczne_MouseEnter);
+            this.pictureBoxNapedyOptyczne.MouseLeave += new System.EventHandler(this.pictureBoxNapedyOptyczne_MouseLeave);
+            // 
+            // labelPopZasilacz
+            // 
+            this.labelPopZasilacz.AutoSize = true;
+            this.labelPopZasilacz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopZasilacz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelPopZasilacz.Location = new System.Drawing.Point(57, 123);
+            this.labelPopZasilacz.Name = "labelPopZasilacz";
+            this.labelPopZasilacz.Size = new System.Drawing.Size(67, 20);
+            this.labelPopZasilacz.TabIndex = 0;
+            this.labelPopZasilacz.Text = "Zasilacz";
+            this.labelPopZasilacz.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPopZasilacz.Visible = false;
+            // 
+            // labelPopRam
+            // 
+            this.labelPopRam.AutoSize = true;
+            this.labelPopRam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopRam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelPopRam.Location = new System.Drawing.Point(198, 161);
+            this.labelPopRam.Name = "labelPopRam";
+            this.labelPopRam.Size = new System.Drawing.Size(101, 20);
+            this.labelPopRam.TabIndex = 18;
+            this.labelPopRam.Text = "Pamięć RAM";
+            this.labelPopRam.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPopRam.Visible = false;
+            // 
+            // labelPopChipsetNorth
+            // 
+            this.labelPopChipsetNorth.AutoSize = true;
+            this.labelPopChipsetNorth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopChipsetNorth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelPopChipsetNorth.Location = new System.Drawing.Point(116, 294);
+            this.labelPopChipsetNorth.Name = "labelPopChipsetNorth";
+            this.labelPopChipsetNorth.Size = new System.Drawing.Size(129, 40);
+            this.labelPopChipsetNorth.TabIndex = 0;
+            this.labelPopChipsetNorth.Text = "Chipset\r\nMostek północny";
+            this.labelPopChipsetNorth.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPopChipsetNorth.Visible = false;
+            // 
+            // labelPopKartaGraficzna
+            // 
+            this.labelPopKartaGraficzna.AutoSize = true;
+            this.labelPopKartaGraficzna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopKartaGraficzna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelPopKartaGraficzna.Location = new System.Drawing.Point(4, 429);
+            this.labelPopKartaGraficzna.Name = "labelPopKartaGraficzna";
+            this.labelPopKartaGraficzna.Size = new System.Drawing.Size(120, 20);
+            this.labelPopKartaGraficzna.TabIndex = 17;
+            this.labelPopKartaGraficzna.Text = "Karta Graficzna";
+            this.labelPopKartaGraficzna.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPopKartaGraficzna.Visible = false;
+            // 
+            // labelPopDyskPamieci
+            // 
+            this.labelPopDyskPamieci.AutoSize = true;
+            this.labelPopDyskPamieci.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopDyskPamieci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelPopDyskPamieci.Location = new System.Drawing.Point(365, 307);
+            this.labelPopDyskPamieci.Name = "labelPopDyskPamieci";
+            this.labelPopDyskPamieci.Size = new System.Drawing.Size(102, 20);
+            this.labelPopDyskPamieci.TabIndex = 15;
+            this.labelPopDyskPamieci.Text = "Dysk pamięci";
+            this.labelPopDyskPamieci.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPopDyskPamieci.Visible = false;
+            // 
+            // labelPopProcesor
+            // 
+            this.labelPopProcesor.AutoSize = true;
+            this.labelPopProcesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
+            this.labelPopProcesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelPopProcesor.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelPopProcesor.Location = new System.Drawing.Point(122, 194);
+            this.labelPopProcesor.Name = "labelPopProcesor";
+            this.labelPopProcesor.Size = new System.Drawing.Size(72, 20);
+            this.labelPopProcesor.TabIndex = 16;
+            this.labelPopProcesor.Text = "Procesor";
+            this.labelPopProcesor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelPopProcesor.Visible = false;
+            // 
             // pictureBoxRam2
             // 
             this.pictureBoxRam2.Location = new System.Drawing.Point(251, 184);
@@ -493,210 +697,6 @@ namespace PracaDyplomowa
             this.PictureBoxComputerBySide.TabIndex = 0;
             this.PictureBoxComputerBySide.TabStop = false;
             // 
-            // labelPopDyskPamieci
-            // 
-            this.labelPopDyskPamieci.AutoSize = true;
-            this.labelPopDyskPamieci.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopDyskPamieci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelPopDyskPamieci.Location = new System.Drawing.Point(365, 307);
-            this.labelPopDyskPamieci.Name = "labelPopDyskPamieci";
-            this.labelPopDyskPamieci.Size = new System.Drawing.Size(102, 20);
-            this.labelPopDyskPamieci.TabIndex = 15;
-            this.labelPopDyskPamieci.Text = "Dysk pamięci";
-            this.labelPopDyskPamieci.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelPopDyskPamieci.Visible = false;
-            // 
-            // labelPopProcesor
-            // 
-            this.labelPopProcesor.AutoSize = true;
-            this.labelPopProcesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopProcesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelPopProcesor.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelPopProcesor.Location = new System.Drawing.Point(122, 194);
-            this.labelPopProcesor.Name = "labelPopProcesor";
-            this.labelPopProcesor.Size = new System.Drawing.Size(72, 20);
-            this.labelPopProcesor.TabIndex = 16;
-            this.labelPopProcesor.Text = "Procesor";
-            this.labelPopProcesor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelPopProcesor.Visible = false;
-            // 
-            // labelPopKartaGraficzna
-            // 
-            this.labelPopKartaGraficzna.AutoSize = true;
-            this.labelPopKartaGraficzna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopKartaGraficzna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelPopKartaGraficzna.Location = new System.Drawing.Point(4, 429);
-            this.labelPopKartaGraficzna.Name = "labelPopKartaGraficzna";
-            this.labelPopKartaGraficzna.Size = new System.Drawing.Size(120, 20);
-            this.labelPopKartaGraficzna.TabIndex = 17;
-            this.labelPopKartaGraficzna.Text = "Karta Graficzna";
-            this.labelPopKartaGraficzna.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelPopKartaGraficzna.Visible = false;
-            // 
-            // labelPopRam
-            // 
-            this.labelPopRam.AutoSize = true;
-            this.labelPopRam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopRam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelPopRam.Location = new System.Drawing.Point(198, 161);
-            this.labelPopRam.Name = "labelPopRam";
-            this.labelPopRam.Size = new System.Drawing.Size(101, 20);
-            this.labelPopRam.TabIndex = 18;
-            this.labelPopRam.Text = "Pamięć RAM";
-            this.labelPopRam.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelPopRam.Visible = false;
-            // 
-            // labelPopZasilacz
-            // 
-            this.labelPopZasilacz.AutoSize = true;
-            this.labelPopZasilacz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopZasilacz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPopZasilacz.Location = new System.Drawing.Point(57, 123);
-            this.labelPopZasilacz.Name = "labelPopZasilacz";
-            this.labelPopZasilacz.Size = new System.Drawing.Size(67, 20);
-            this.labelPopZasilacz.TabIndex = 0;
-            this.labelPopZasilacz.Text = "Zasilacz";
-            this.labelPopZasilacz.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelPopZasilacz.Visible = false;
-            // 
-            // labelPopNapendyOptyczne
-            // 
-            this.labelPopNapendyOptyczne.AutoSize = true;
-            this.labelPopNapendyOptyczne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopNapendyOptyczne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPopNapendyOptyczne.Location = new System.Drawing.Point(345, 98);
-            this.labelPopNapendyOptyczne.Name = "labelPopNapendyOptyczne";
-            this.labelPopNapendyOptyczne.Size = new System.Drawing.Size(134, 20);
-            this.labelPopNapendyOptyczne.TabIndex = 21;
-            this.labelPopNapendyOptyczne.Text = "Napędy Optyczne";
-            this.labelPopNapendyOptyczne.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelPopNapendyOptyczne.Visible = false;
-            // 
-            // labelPopChipsetNorth
-            // 
-            this.labelPopChipsetNorth.AutoSize = true;
-            this.labelPopChipsetNorth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopChipsetNorth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPopChipsetNorth.Location = new System.Drawing.Point(116, 294);
-            this.labelPopChipsetNorth.Name = "labelPopChipsetNorth";
-            this.labelPopChipsetNorth.Size = new System.Drawing.Size(129, 40);
-            this.labelPopChipsetNorth.TabIndex = 0;
-            this.labelPopChipsetNorth.Text = "Chipset\r\nMostek północny";
-            this.labelPopChipsetNorth.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelPopChipsetNorth.Visible = false;
-            // 
-            // labelPopChipsetSouth
-            // 
-            this.labelPopChipsetSouth.AutoSize = true;
-            this.labelPopChipsetSouth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopChipsetSouth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPopChipsetSouth.Location = new System.Drawing.Point(179, 469);
-            this.labelPopChipsetSouth.Name = "labelPopChipsetSouth";
-            this.labelPopChipsetSouth.Size = new System.Drawing.Size(144, 40);
-            this.labelPopChipsetSouth.TabIndex = 3;
-            this.labelPopChipsetSouth.Text = "Chipset\r\nMostek południowy";
-            this.labelPopChipsetSouth.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelPopChipsetSouth.Visible = false;
-            // 
-            // labelPopPlytaGlowna
-            // 
-            this.labelPopPlytaGlowna.AutoSize = true;
-            this.labelPopPlytaGlowna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopPlytaGlowna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPopPlytaGlowna.Location = new System.Drawing.Point(3, 152);
-            this.labelPopPlytaGlowna.Name = "labelPopPlytaGlowna";
-            this.labelPopPlytaGlowna.Size = new System.Drawing.Size(113, 40);
-            this.labelPopPlytaGlowna.TabIndex = 0;
-            this.labelPopPlytaGlowna.Text = "Płyta Główna\r\nACER EG31M";
-            this.labelPopPlytaGlowna.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBoxNapedyOptyczne
-            // 
-            this.pictureBoxNapedyOptyczne.Location = new System.Drawing.Point(330, 0);
-            this.pictureBoxNapedyOptyczne.Name = "pictureBoxNapedyOptyczne";
-            this.pictureBoxNapedyOptyczne.Size = new System.Drawing.Size(156, 232);
-            this.pictureBoxNapedyOptyczne.TabIndex = 22;
-            this.pictureBoxNapedyOptyczne.TabStop = false;
-            this.pictureBoxNapedyOptyczne.MouseEnter += new System.EventHandler(this.pictureBoxNapedyOptyczne_MouseEnter);
-            this.pictureBoxNapedyOptyczne.MouseLeave += new System.EventHandler(this.pictureBoxNapedyOptyczne_MouseLeave);
-            // 
-            // pictureBoxChipsetNorth
-            // 
-            this.pictureBoxChipsetNorth.Location = new System.Drawing.Point(152, 333);
-            this.pictureBoxChipsetNorth.Name = "pictureBoxChipsetNorth";
-            this.pictureBoxChipsetNorth.Size = new System.Drawing.Size(51, 46);
-            this.pictureBoxChipsetNorth.TabIndex = 23;
-            this.pictureBoxChipsetNorth.TabStop = false;
-            this.pictureBoxChipsetNorth.MouseEnter += new System.EventHandler(this.pictureBoxChipsetNorth_MouseEnter);
-            this.pictureBoxChipsetNorth.MouseLeave += new System.EventHandler(this.pictureBoxChipsetNorth_MouseLeave);
-            // 
-            // pictureBoxChipsetSouth
-            // 
-            this.pictureBoxChipsetSouth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxChipsetSouth.Location = new System.Drawing.Point(217, 427);
-            this.pictureBoxChipsetSouth.Name = "pictureBoxChipsetSouth";
-            this.pictureBoxChipsetSouth.Size = new System.Drawing.Size(28, 39);
-            this.pictureBoxChipsetSouth.TabIndex = 24;
-            this.pictureBoxChipsetSouth.TabStop = false;
-            this.pictureBoxChipsetSouth.MouseEnter += new System.EventHandler(this.pictureBoxChipsetSouth_MouseEnter);
-            this.pictureBoxChipsetSouth.MouseLeave += new System.EventHandler(this.pictureBoxChipsetSouth_MouseLeave);
-            // 
-            // pictureBoxZasilacz
-            // 
-            this.pictureBoxZasilacz.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxZasilacz.Name = "pictureBoxZasilacz";
-            this.pictureBoxZasilacz.Size = new System.Drawing.Size(188, 120);
-            this.pictureBoxZasilacz.TabIndex = 25;
-            this.pictureBoxZasilacz.TabStop = false;
-            this.pictureBoxZasilacz.MouseEnter += new System.EventHandler(this.pictureBoxZasilacz_MouseEnter);
-            this.pictureBoxZasilacz.MouseLeave += new System.EventHandler(this.pictureBoxZasilacz_MouseLeave);
-            // 
-            // pictureBoxKartaSieciowa
-            // 
-            this.pictureBoxKartaSieciowa.Location = new System.Drawing.Point(32, 479);
-            this.pictureBoxKartaSieciowa.Name = "pictureBoxKartaSieciowa";
-            this.pictureBoxKartaSieciowa.Size = new System.Drawing.Size(139, 29);
-            this.pictureBoxKartaSieciowa.TabIndex = 26;
-            this.pictureBoxKartaSieciowa.TabStop = false;
-            this.pictureBoxKartaSieciowa.MouseEnter += new System.EventHandler(this.pictureBoxKartaSieciowa_MouseEnter);
-            this.pictureBoxKartaSieciowa.MouseLeave += new System.EventHandler(this.pictureBoxKartaSieciowa_MouseLeave);
-            // 
-            // labelPopSieciowa
-            // 
-            this.labelPopSieciowa.AutoSize = true;
-            this.labelPopSieciowa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopSieciowa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPopSieciowa.Location = new System.Drawing.Point(40, 520);
-            this.labelPopSieciowa.Name = "labelPopSieciowa";
-            this.labelPopSieciowa.Size = new System.Drawing.Size(114, 20);
-            this.labelPopSieciowa.TabIndex = 27;
-            this.labelPopSieciowa.Text = "Karta Sieciowa";
-            this.labelPopSieciowa.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelPopSieciowa.Visible = false;
-            // 
-            // pictureBoxBateria
-            // 
-            this.pictureBoxBateria.Location = new System.Drawing.Point(266, 389);
-            this.pictureBoxBateria.Name = "pictureBoxBateria";
-            this.pictureBoxBateria.Size = new System.Drawing.Size(26, 29);
-            this.pictureBoxBateria.TabIndex = 28;
-            this.pictureBoxBateria.TabStop = false;
-            this.pictureBoxBateria.MouseEnter += new System.EventHandler(this.pictureBoxBateria_MouseEnter);
-            this.pictureBoxBateria.MouseLeave += new System.EventHandler(this.pictureBoxBateria_MouseLeave);
-            // 
-            // labelPopBateria
-            // 
-            this.labelPopBateria.AutoSize = true;
-            this.labelPopBateria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(209)))), ((int)(((byte)(139)))));
-            this.labelPopBateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelPopBateria.Location = new System.Drawing.Point(247, 366);
-            this.labelPopBateria.Name = "labelPopBateria";
-            this.labelPopBateria.Size = new System.Drawing.Size(60, 20);
-            this.labelPopBateria.TabIndex = 29;
-            this.labelPopBateria.Text = "Bateria";
-            this.labelPopBateria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelPopBateria.Visible = false;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -713,18 +713,18 @@ namespace PracaDyplomowa
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBateria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKartaSieciowa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZasilacz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChipsetSouth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChipsetNorth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNapedyOptyczne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProcesor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDysk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKartaGraf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxComputerBySide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNapedyOptyczne)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChipsetNorth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChipsetSouth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZasilacz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKartaSieciowa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBateria)).EndInit();
             this.ResumeLayout(false);
 
         }
