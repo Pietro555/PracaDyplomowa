@@ -233,48 +233,48 @@ namespace PracaDyplomowa
                     if(CommandLine.Text.Equals("comp"))
                     {
                         if (procesor != null)
-                            text += procesor.GetInfo() + "\r\n";
+                            text += procesor.GetInfo() + "\r\n\r\n";
                         else
-                            text += "ERROR\r\n";
+                            text += "ERROR\r\n\r\n";
 
                         if(kartaGraficzna != null)
-                            text += kartaGraficzna.GetInfo() + "\r\n";
+                            text += kartaGraficzna.GetInfo() + "\r\n\r\n";
                         else
-                            text += "ERROR\r\n";
+                            text += "ERROR\r\n\r\n";
 
                         if (ram != null)
-                            text += ram.GetInfo() + "\r\n";
+                            text += ram.GetInfo() + "\r\n\r\n";
                         else
-                            text += "ERROR\r\n";
+                            text += "ERROR\r\n\r\n";
 
                         if (dysk != null)
-                            text += dysk.GetInfo() + "\r\n";
+                            text += dysk.GetInfo() + "\r\n\r\n";
                         else
-                            text += "ERROR\r\n";
+                            text += "ERROR\r\n\r\n";
                     }
 
                     if(CommandLine.Text.Contains("-p") && UsedP == false && procesor != null)
                     {
                         UsedP = true;
-                        text += procesor.GetInfo() + "\r\n";
+                        text += procesor.GetInfo() + "\r\n\r\n";
                     }
 
                     if (CommandLine.Text.Contains("-g") && UsedG == false && kartaGraficzna != null)
                     {
                         UsedG = true;
-                        text += kartaGraficzna.GetInfo() + "\r\n";
+                        text += kartaGraficzna.GetInfo() + "\r\n\r\n";
                     }
 
                     if (CommandLine.Text.Contains("-r") && UsedR == false && ram != null)
                     {
                         UsedR = true;
-                        text += ram.GetInfo() + "\r\n";
+                        text += ram.GetInfo() + "\r\n\r\n";
                     }
 
                     if (CommandLine.Text.Contains("-d") && UsedD == false && dysk != null)
                     {
                         UsedD = true;
-                        text += dysk.GetInfo() + "\r\n";
+                        text += dysk.GetInfo() + "\r\n\r\n";
                     }
 
                     Terminal.AppendText(text);
@@ -332,23 +332,62 @@ namespace PracaDyplomowa
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Component intelCore = new Component("Intel core", "Specyfikacje intel cora", "Intel", Properties.Resources.intelcore);
-            Component amdRyzen = new Component("AMD ryzen", "Specyfikacje AMD ryzena", "AMD", Properties.Resources.amdRyzen);
+            Component intelCore = new Component(
+                "Intel core i7-4770",
+                "Liczba rdzeni: 4\r\nLiczba wątków: 8\r\nUkład graficzny procesora: Intel® HD Graphics 4600",
+                "Intel",
+                Properties.Resources.intelcore);
+
+            Component amdRyzen = new Component(
+                "AMD ryzen 7 1800X",
+                "Liczba rdzeni: 8\r\nLiczba wątków: 16\r\nCzęstotliwość zegara: 3600 MHz", 
+                "AMD", 
+                Properties.Resources.amdRyzen);
+
             procesory.Add(intelCore);
             procesory.Add(amdRyzen);
 
-            Component geforceRTX = new Component("Gigabyte GeForce RTX 3060", "Specyfikacje RTXa", "Gigabyte", Properties.Resources.rtx);
-            Component AmdRadeon = new Component("Gigabyte GeForce GTX 1060 Windforce", "Specyfikacje windforca", "Gigabyte", Properties.Resources.windforce);
+            Component geforceRTX = new Component(
+                "Gigabyte GeForce RTX 3060",
+                "Ilość pamięci RAM: 12 GB\r\nTaktowanie rdzenia: 1320 MHz\r\nTyp złącza: PCI Express 4.0 x16",
+                "Gigabyte",
+                Properties.Resources.rtx);
+
+            Component AmdRadeon = new Component(
+                "Gigabyte GeForce GTX 1060 Windforce",
+                "Ilość pamięci RAM: 6 GB\r\nTaktowanie rdzenia: 1582 MHz\r\nTyp złącza: PCI Express 3.0 x16",
+                "Gigabyte",
+                Properties.Resources.windforce);
             kartyGraficzne.Add(geforceRTX);
             kartyGraficzne.Add(AmdRadeon);
 
-            Component hdd = new Component("HDD", "Specyfikacje HDD", "Toshiba", Properties.Resources.hdd);
-            Component ssd = new Component("SSD", "Specyfikacje SSD", "Western Digital", Properties.Resources.ssd);
+            Component hdd = new Component(
+                "Toshiba 500GB HDD",
+                "Pojemność: 500 GB\r\n Prędkość obrotowa: 7200 obr./ min\r\nFormat: 3.5''",
+                "Toshiba",
+                Properties.Resources.hdd);
+
+            Component ssd = new Component(
+                "WD 240GB SSD",
+                "Pojemność: 240 GB\r\n Prędkość odczytu: 545 MB/s\r\nFormat: 2.5''",
+                "Western Digital",
+                Properties.Resources.ssd);
+
             dyski.Add(hdd);
             dyski.Add(ssd);
 
-            Component furyBeast = new Component("RAM Fury Beast", "Specyfikacje fury beast", "Kingston");
-            Component vengance = new Component("RAM Vengeance", "Specyfikacje vengena", "Corsair");
+            Component furyBeast = new Component(
+                "RAM Fury Beast",
+                "Rodzaj pamięci: DDR4\r\nPojemność kości: 16 GB\r\nTaktowanie: 3200 MHz",
+                "Kingston",
+                Properties.Resources.ramfury);
+
+            Component vengance = new Component(
+                "RAM Vengeance",
+                "Rodzaj pamięci: DDR4\r\nPojemność kości: 16 GB\r\nTaktowanie: 3200 MHz",
+                "Corsair",
+                Properties.Resources.vegence);
+
             ramy.Add(furyBeast);
             ramy.Add(vengance);
         }

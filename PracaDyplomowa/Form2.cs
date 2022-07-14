@@ -350,8 +350,16 @@ namespace PracaDyplomowa
 
                 if (comboBoxProcesor.SelectedIndex != -1 && fm1.procesory.ElementAt(comboBoxProcesor.SelectedIndex).zdjecie != null)
                 {
-                    File.Delete(location + "\\procesor.png");
-                    fm1.procesory.ElementAt(comboBoxProcesor.SelectedIndex).zdjecie.Save(location + "\\procesor.png");
+                    try
+                    {
+                        File.Delete(location + "\\procesor.png");
+                        fm1.procesory.ElementAt(comboBoxProcesor.SelectedIndex).zdjecie.Save(location + "\\procesor.png");
+                    }
+                    catch (IOException)
+                    {
+                        Console.WriteLine("PLIK JEST AKTTLUANIE UŻYWANY PRZEZ INNY PROCES");
+                    }
+
                 }
                 else
                 {
@@ -359,16 +367,22 @@ namespace PracaDyplomowa
                     {
                         File.Delete(location + "\\procesor.png");
                     }
-                    catch(FileNotFoundException)
-                    { }
-                    
+                    catch (FileNotFoundException) { }
+                    catch (IOException) { }
+
                 }
                     
 
                 if (comboBoxGrafa.SelectedIndex != -1 && fm1.kartyGraficzne.ElementAt(comboBoxGrafa.SelectedIndex).zdjecie != null)
                 {
+                    try { 
                     File.Delete(location + "\\karta_graficzna.png");
                     fm1.kartyGraficzne.ElementAt(comboBoxGrafa.SelectedIndex).zdjecie.Save(location + "\\karta_graficzna.png");
+                    }
+                    catch (IOException)
+                    {
+                        Console.WriteLine("PLIK JEST AKTTLUANIE UŻYWANY PRZEZ INNY PROCES");
+                    }
                 }
                 else
                 {
@@ -376,15 +390,22 @@ namespace PracaDyplomowa
                     {
                         File.Delete(location + "\\karta_graficzna.png");
                     }
-                    catch (FileNotFoundException)
-                    { }
+                    catch (FileNotFoundException) { }
+                    catch (IOException) { }
 
                 }
 
                 if (comboBoxRAM.SelectedIndex != -1 && fm1.ramy.ElementAt(comboBoxRAM.SelectedIndex).zdjecie != null)
                 {
-                    File.Delete(location + "\\ram.png");
-                    fm1.ramy.ElementAt(comboBoxRAM.SelectedIndex).zdjecie.Save(location + "\\ram.png");
+                    try
+                    {
+                        File.Delete(location + "\\ram.png");
+                        fm1.ramy.ElementAt(comboBoxRAM.SelectedIndex).zdjecie.Save(location + "\\ram.png");
+                    }
+                    catch (IOException)
+                    {
+                        Console.WriteLine("PLIK JEST AKTTLUANIE UŻYWANY PRZEZ INNY PROCES");
+                    }
                 }
                 else
                 {
@@ -392,15 +413,22 @@ namespace PracaDyplomowa
                     {
                         File.Delete(location + "\\ram.png");
                     }
-                    catch (FileNotFoundException)
-                    { }
+                    catch (FileNotFoundException) { }
+                    catch (IOException) { }
 
                 }
 
                 if (comboBoxDysk.SelectedIndex != -1 && fm1.dyski.ElementAt(comboBoxDysk.SelectedIndex).zdjecie != null)
                 {
-                    File.Delete(location + "\\dysk.png");
-                    fm1.dyski.ElementAt(comboBoxDysk.SelectedIndex).zdjecie.Save(location + "\\dysk.png");
+                    try
+                    {
+                        File.Delete(location + "\\dysk.png");
+                        fm1.dyski.ElementAt(comboBoxDysk.SelectedIndex).zdjecie.Save(location + "\\dysk.png");
+                    }
+                    catch (IOException)
+                    {
+                        Console.WriteLine("PLIK JEST AKTTLUANIE UŻYWANY PRZEZ INNY PROCES");
+                    }
                 }
                 else
                 {
@@ -408,8 +436,8 @@ namespace PracaDyplomowa
                     {
                         File.Delete(location + "\\dysk.png");
                     }
-                    catch (FileNotFoundException)
-                    { }
+                    catch (FileNotFoundException) { }
+                    catch (IOException) { }
 
                 }
             }
@@ -433,10 +461,12 @@ namespace PracaDyplomowa
                         try
                         {
                             fm1.procesory.Add(new Component(dane[0], dane[1], dane[2], Image.FromFile(l + "//procesor.png")));
+                            comboBoxProcesor.Items.Add(new Component(dane[0], dane[1], dane[2], Image.FromFile(l + "//procesor.png")));
                         }
                         catch (FileNotFoundException)
                         {
                             fm1.procesory.Add(new Component(dane[0], dane[1], dane[2]));
+                            comboBoxProcesor.Items.Add(new Component(dane[0], dane[1], dane[2]));
                         }
                     }
                     comboBoxProcesor.SelectedIndex = comboBoxProcesor.FindStringExact(dane[0]);
@@ -452,10 +482,12 @@ namespace PracaDyplomowa
                         try
                         {
                             fm1.kartyGraficzne.Add(new Component(dane[0], dane[1], dane[2], Image.FromFile(l + "//karta_graficzna.png")));
+                            comboBoxGrafa.Items.Add(new Component(dane[0], dane[1], dane[2], Image.FromFile(l + "//karta_graficzna.png")));
                         }
                         catch (FileNotFoundException)
                         {
                             fm1.kartyGraficzne.Add(new Component(dane[0], dane[1], dane[2]));
+                            comboBoxGrafa.Items.Add(new Component(dane[0], dane[1], dane[2]));
                         }
                     }
                     comboBoxGrafa.SelectedIndex = comboBoxGrafa.FindStringExact(dane[0]);
@@ -470,10 +502,12 @@ namespace PracaDyplomowa
                         try
                         {
                             fm1.ramy.Add(new Component(dane[0], dane[1], dane[2], Image.FromFile(l + "//ram.png")));
+                            comboBoxRAM.Items.Add(new Component(dane[0], dane[1], dane[2], Image.FromFile(l + "//ram.png")));
                         }
                         catch (FileNotFoundException)
                         {
                             fm1.ramy.Add(new Component(dane[0], dane[1], dane[2]));
+                            comboBoxRAM.Items.Add(new Component(dane[0], dane[1], dane[2]));
                         }
                     }
                     comboBoxRAM.SelectedIndex = comboBoxRAM.FindStringExact(dane[0]);
@@ -488,10 +522,12 @@ namespace PracaDyplomowa
                         try
                         {
                             fm1.dyski.Add(new Component(dane[0], dane[1], dane[2], Image.FromFile(l + "//dysk.png")));
+                            comboBoxDysk.Items.Add(new Component(dane[0], dane[1], dane[2], Image.FromFile(l + "//dysk.png")));
                         }
                         catch (FileNotFoundException)
                         {
                             fm1.dyski.Add(new Component(dane[0], dane[1], dane[2]));
+                            comboBoxDysk.Items.Add(new Component(dane[0], dane[1], dane[2]));
                         }
                     }
                     comboBoxDysk.SelectedIndex = comboBoxDysk.FindStringExact(dane[0]);

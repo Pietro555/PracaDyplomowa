@@ -163,6 +163,16 @@ namespace PracaDyplomowa.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ramfury {
+            get {
+                object obj = ResourceManager.GetObject("ramfury", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rtx {
             get {
                 object obj = ResourceManager.GetObject("rtx", resourceCulture);
@@ -186,6 +196,16 @@ namespace PracaDyplomowa.Properties {
         internal static System.Drawing.Bitmap TestOS {
             get {
                 object obj = ResourceManager.GetObject("TestOS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vegence {
+            get {
+                object obj = ResourceManager.GetObject("vegence", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

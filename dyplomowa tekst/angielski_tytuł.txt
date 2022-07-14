@@ -1,0 +1,1 @@
+Application - simulator of the operation of a PC class computer based on its block layouts

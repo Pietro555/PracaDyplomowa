@@ -39,7 +39,7 @@ namespace PracaDyplomowa
 
         public string GetInfo()
         {
-            string info = ""+ this.nazwa+";"+ this.specyfikacje + ";" + this.producent;
+            string info = ""+ this.nazwa+";"+ this.specyfikacje.Replace("\r\n", "") + ";Producent: " + this.producent+";";
             return info;
         }
 
